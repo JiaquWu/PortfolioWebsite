@@ -20,7 +20,7 @@ function Home2() {
             </h1>
             <p className="home-about-body">
             Four years ago in my second year of university, I realized that developing games was what I would most like to do in the future, so I taught myself C# and Unity development from scratch and developed a lot of <a href="https://jiaqu-wu.itch.io/" className="purple">mini games</a> in numerous Game Jams. 
-            During the last two years of my studies in Sweden, I worked as game programmer on a few <a href="#" className="purple">game projects</a> and had the opportunity to intern as a game programmer at a studio that makes commercial games. 
+            During the last two years of my studies in Sweden, I worked as game programmer on a few <a href="https://jiaqu-wu.com/" className="purple">game projects</a> and had the opportunity to intern as a game programmer at a studio that makes commercial games. 
             
               <br />
               <br />I'm very familiar with 

@@ -4,8 +4,8 @@ import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
+  // AiOutlineTwitter,
+  // AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -19,27 +19,26 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+            Four years ago in my second year of university, I realized that developing games was what I would most like to do in the future, so I taught myself C# and Unity development from scratch and developed a lot of <a href="https://jiaqu-wu.itch.io/" className="purple">mini games</a> in numerous Game Jams. 
+            During the last two years of my studies in Sweden, I worked as game programmer on a few <a href="#" className="purple">game projects</a> and had the opportunity to intern as a game programmer at a studio that makes commercial games. 
+            
               <br />
-              <br />I am fluent in classics like
+              <br />I'm very familiar with 
               <i>
-                <b className="purple"> C++, Javascript and Python. </b>
+                <b className="purple"> C# and Unity </b>,
+                and I've worked with <b className="purple"> Unreal and blueprints </b> before.
               </i>
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
+              I am passionate about implementing interesting 
               <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Deep Learning and Natural Launguage Processing.
-                </b>
+                <b className="purple"> game systems </b>,
+                <b className="purple"> game features</b> and I seek to make the games I develop a very enjoyable and impressive experience for as many players as possible.
               </i>
               <br />
               <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
+              In the future, I'm eager to work on more interesting game projects.
+              {/* //<b className="purple"></b> a
               <i>
                 <b className="purple">
                   {" "}
@@ -49,7 +48,7 @@ function Home2() {
               &nbsp; like
               <i>
                 <b className="purple"> React.js and Next.js</b>
-              </i>
+              </i> */}
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -67,7 +66,7 @@ function Home2() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://github.com/soumyajit4419"
+                  href="https://github.com/JiaquWu"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -75,7 +74,7 @@ function Home2() {
                   <AiFillGithub />
                 </a>
               </li>
-              <li className="social-icons">
+              {/* <li className="social-icons">
                 <a
                   href="https://twitter.com/Soumyajit4419"
                   target="_blank"
@@ -84,10 +83,10 @@ function Home2() {
                 >
                   <AiOutlineTwitter />
                 </a>
-              </li>
+              </li> */}
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
+                  href="https://www.linkedin.com/in/jiaqu-wu"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -95,7 +94,7 @@ function Home2() {
                   <FaLinkedinIn />
                 </a>
               </li>
-              <li className="social-icons">
+              {/* <li className="social-icons">
                 <a
                   href="https://www.instagram.com/s.o.u.m.y.a_j.i.t/"
                   target="_blank"
@@ -104,7 +103,7 @@ function Home2() {
                 >
                   <AiFillInstagram />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </Col>
         </Row>

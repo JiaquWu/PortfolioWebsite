@@ -140,7 +140,7 @@ function Projects() {
               videoWidth = "1280"
               // imgPath={chatify}
               title="Other Projects"
-              description = <h6><a href="jiaqu-wu.itch.io">update information</a></h6> 
+              description = <h6>This is a collection of videos of games that I have also worked on in addition to those above, they are all available at <a href="https://jiaqu-wu.itch.io">jiaqu-wu.itch.io</a> for more information and can be played online or downloaded</h6> 
             />
         </Row>
       </Container>

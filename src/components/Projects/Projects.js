@@ -45,8 +45,8 @@ function Projects() {
               title="Jump!"
               description="Jump! is a collaborated work with the University of Skövde, WWF, and SLU with the aim of increasing interest towards the seabirds living in the Baltic Sea. 
               My contribution: Implemented most of game features with C# and Unity:
-              Satisfying third person character controller using Cinemachine
-              Worked with artists to polish the animation system, the AI system, and the shadergraph to create shader objects for the game environment and interaction system to improve the player experience.
+              Satisfying third person character controller using Cinemachine.
+              Worked with artists to polish animation system, AI system, and Shadergraph to create shader objects for the game environment and interaction system to improve the player experience.
               Implemented game progression system, save system, quick time events (QTE) system etc.
               "
               //ghLink="https://github.com/soumyajit4419/Chatify"
@@ -57,7 +57,7 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               title="Auto-Battler Project"
-              description="This is a game project that I have been working on alone recently which implements most of the features of the auto-battler game genre in single player game mode, including some of the more complex but interesting game systems:
+              description="It is a game project that I have been working on alone recently which implemented most of the features of the auto-battler game genre in single player game mode with Unity, including some of the more complex but interesting game systems:
               The A-star algorithm was used to implement a dynamic pathfinding system for the champion during combat, and a finite state machine was used to implement changes in the champion's behaviour in different states, which together implemented the champion's AI system.
               Built the champion's attributes system, buff system, and ability system using Scriptable Objects and C# object-oriented features. These together with the game's event system provide a solid infrastructure that allows for highly scalable game development and greatly reduces code coupling.
 
@@ -75,7 +75,7 @@ function Projects() {
               videoHeight = "100%"
               videoWidth = "100%"
               title="Online Project"
-              description="This project was an attempt by myself and a few other developers to develop a Steam online multiplayer demo using Unreal4 at a Game Jam and ended up with a mini game that could be played by multiple players on Steam.
+              description="This project was an attempt by me and a few other developers to develop a Steam online multiplayer demo using Unreal4 at a Game Jam and ended up with a mini game that could be played by multiple players through Steam network.
               My contribution: implemented the multiplayer online marble mini game system using Unreal and Blueprint within the Unreal-Steam multiplayer network framework. Researched solutions for Steam online games through various sources and finally configured a viable solution, and migrated project code from Unity to Unreal's blueprints
               "
               //ghLink="https://github.com/soumyajit4419/Editor.io"
@@ -88,7 +88,7 @@ function Projects() {
               title="Cat Clinic"
               description="This is a serious game prototype that I worked on with a friend for his thesis, it's designed to help procrastinators reduce academic procrastination. He provided me with the designs and artwork and I built it.
               Main game features:
-              Implemented a more complete game save system with different save slots by using JSON for serializing and deserializing game object
+              Implemented a solid game save system with different save slots by using JSON for serializing and deserializing game object
               Implemented game time system and economic system for idle game features by calculating real time
               "
               //ghLink="https://github.com/soumyajit4419/Plant_AI"
@@ -99,7 +99,7 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard 
               videoTitle = "Buddy"
-              videoLink = "https://www.youtube.com/embed/eAg_nXC3pm0"
+              videoLink = "https://www.youtube.com/embed/jEAGbsIGn2E"
               videoHeight = "100%"
               videoWidth = "100%"
               title="Buddy"
@@ -126,7 +126,7 @@ function Projects() {
               description="Call of Wind is a 2d puzzle platformer game that I worked on with other student developers for around two months in 2019, and it won a prize in a student game development competition in China at the time.
               My contribution:
               Design and implemented wind-related puzzles and game mechanics
-              Constantly optimising and iterating on game details based on player feedback"
+              Constantly optimised and iterated on game details based on player feedback"
               //ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
                demoLink="https://jiaqu-wu.itch.io/call-of-wind-v10"      //<--------Please include a demo link here 
             />

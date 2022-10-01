@@ -3,13 +3,14 @@ import { Container, Row, Col } from "react-bootstrap";
 // import myImg from "../../Assets/avatar.svg";
 //import avatar1 from "../../Assets/avatar1.jpg"
 import avatar2 from "../../Assets/avatar2.jpg"
+//import itch1 from "../../Assets/itch1.png"
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
   // AiOutlineTwitter,
   // AiFillInstagram,
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn,FaItchIo } from "react-icons/fa";
 
 function Home2() {
   return (
@@ -28,13 +29,13 @@ function Home2() {
               <br />I'm very familiar with 
               <i>
                 <b className="purple"> C# and Unity </b>,
-                and I've worked with <b className="purple"> Unreal and blueprints </b> before.
+                and I've worked with <b className="purple"> Unreal and Blueprints </b> before.
               </i>
               <br />
               <br />
-              I am passionate about implementing interesting 
+              I have a very strong passion for implementing interesting 
               <i>
-                <b className="purple"> game systems </b>,
+                <b className="purple"> game systems</b>,
                 <b className="purple"> game features</b> and I seek to make the games I develop a very enjoyable and impressive experience for as many players as possible.
               </i>
               <br />
@@ -88,6 +89,16 @@ function Home2() {
               </li> */}
               <li className="social-icons">
                 <a
+                  href="https://jiaqu-wu.itch.io"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <FaItchIo />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
                   href="https://www.linkedin.com/in/jiaqu-wu"
                   target="_blank"
                   rel="noreferrer"
@@ -96,6 +107,8 @@ function Home2() {
                   <FaLinkedinIn />
                 </a>
               </li>
+              
+              
               {/* <li className="social-icons">
                 <a
                   href="https://www.instagram.com/s.o.u.m.y.a_j.i.t/"

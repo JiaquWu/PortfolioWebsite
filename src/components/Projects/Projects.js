@@ -29,8 +29,7 @@ function Projects() {
               videoWidth = "1280"
               // imgPath={chatify}
               title="Receiver 2"
-              description = <h6>My contribution: Implemented new game features according to players' feedback,
-              Fixed a lot of miscellaneous game bugs, most of which can be found in this 
+              description = <h6>My contribution: Implemented new game features, and resolved 20+ miscellaneous game bugs/issues, most of which can be found in this 
               <a href="https://store.steampowered.com/news/app/1129310/view/3019092467758679460"> game update information </a>
               Worked with other developers to develop new weapons and new game maps.</h6>  
             />
@@ -57,14 +56,14 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               title="Auto-Battler Project"
-              description="It is a game project that I have been working on alone recently which implemented most of the features of the auto-battler game genre in single player game mode with Unity, including some of the more complex but interesting game systems:
+              description="It's a game project that I have been working on alone recently which contains basic features of the auto-battler game genre in single player game mode with Unity, including some of the more complex but interesting game systems:
               The A-star algorithm was used to implement a dynamic pathfinding system for the champion during combat, and a finite state machine was used to implement changes in the champion's behaviour in different states, which together implemented the champion's AI system.
               Built the champion's attributes system, buff system, and ability system using Scriptable Objects and C# object-oriented features. These together with the game's event system provide a solid infrastructure that allows for highly scalable game development and greatly reduces code coupling.
 
               "
               isGithub = "true"
-              ghLink=""
-              demoLink=""
+              ghLink="https://github.com/JiaquWu/CardGamePractice"
+              //demoLink=""
             />
           </Col>
 
@@ -84,9 +83,13 @@ function Projects() {
           </Col>
 
           <Col md={4} className="project-card">
-            <ProjectCard
+            <ProjectCard  
               title="Cat Clinic"
-              description="This is a serious game prototype that I worked on with a friend for his thesis, it's designed to help procrastinators reduce academic procrastination. He provided me with the designs and artwork and I built it.
+              videoTitle = "Buddy"
+              videoLink = "https://www.youtube.com/embed/hjEBOPoB3uk"
+              videoHeight = "100%"
+              videoWidth = "100%"
+              description="This is a serious game prototype that I worked on with a friend for his thesis, it's designed to help procrastinators reduce academic procrastination. I built it with his artwork and design draft.
               Main game features:
               Implemented a solid game save system with different save slots by using JSON for serializing and deserializing game object
               Implemented game time system and economic system for idle game features by calculating real time
@@ -103,9 +106,7 @@ function Projects() {
               videoHeight = "100%"
               videoWidth = "100%"
               title="Buddy"
-              description=<h6>This game project is my thesis work for my Master's degree at the University of Skövde, and I did the whole project and    
-               <a href="http://www.diva-portal.org/smash/record.jsf?dswid=4471&pid=diva2%3A1676937&c=1&searchType=SIMPLE&language=en&query=jiaqu&af=%5B%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all"> thesis </a> 
-               by myself, excluding the artwork. 
+              description=<h6>This game project is my thesis work for my Master's degree at the University of Skövde, and I did the whole project and <a href="http://www.diva-portal.org/smash/record.jsf?dswid=4471&pid=diva2%3A1676937&c=1&searchType=SIMPLE&language=en&query=jiaqu&af=%5B%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all">thesis</a> by myself, excluding the artwork. 
               The game was originally designed to see if the player could understand the rules and get the "every life counts" message that I wanted to send to the player without providing any explanation of the rules to the player. So overall I spent more time on the game design than on the programming.
               Main game features: implemented undo system with different game objects and commands from players by using new input system in Unity and command pattern.
               </h6> 

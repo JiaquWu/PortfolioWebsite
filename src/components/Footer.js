@@ -5,7 +5,7 @@ import {
   // AiOutlineTwitter,
   // AiFillInstagram,
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn,FaItchIo } from "react-icons/fa";
 
 function Footer() {
   let date = new Date();
@@ -43,6 +43,16 @@ function Footer() {
             </li> */}
             <li className="social-icons">
               <a
+                href="https://jiaqu-wu.itch.io"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FaItchIo />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
                 href="https://www.linkedin.com/in/jiaqu-wu"
                 style={{ color: "white" }}
                 target="_blank" 
@@ -51,6 +61,7 @@ function Footer() {
                 <FaLinkedinIn />
               </a>
             </li>
+            
             {/* <li className="social-icons">
               <a
                 href="https://www.instagram.com/s.o.u.m.y.a_j.i.t/"

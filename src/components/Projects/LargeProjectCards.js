@@ -9,7 +9,7 @@ function LargeProjectCards(props) {
         height={props.videoHeight} width={props.videoWidth} frameborder="0" allowfullscreen="true" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
-          <Card.Text style={{ textAlign: "justify" ,lineBreak:"auto"}}>
+          <Card.Text style={{ textAlign: "left" ,lineBreak:"auto"}}>
             {props.description}
           </Card.Text>
           {/* <Card.Link>

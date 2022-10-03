@@ -29,9 +29,9 @@ function Projects() {
               videoWidth = "1280"
               // imgPath={chatify}
               title="Receiver 2"
-              description = <h6 style={{lineHeight:1.5}}>My contribution: Implemented new game features, and resolved 20+ miscellaneous game bugs/issues, most of which can be found in this 
+              description = <h6 style={{lineHeight:1.5}}>My contribution: <br></br>· Implemented new game features, and resolved 20+ miscellaneous game bugs/issues, most of which can be found in this 
               <a href="https://store.steampowered.com/news/app/1129310/view/3019092467758679460"> game update information </a>.
-              Worked with other developers to develop new weapons and new game maps.</h6>  
+              <br></br>· Worked with other developers to develop new weapons and new game maps.</h6>  
             />
         </Row>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>

@@ -12,7 +12,7 @@ function Type() {
         ],
         autoStart: true,
         loop: true,
-        pauseFor: 15000
+        pauseFor: 5000
       }}
     />
   );

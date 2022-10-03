@@ -55,6 +55,10 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              videoTitle = "Auto-Battler Project"
+              videoLink = "https://www.youtube.com/embed/IGpLF2rV2hg"
+              videoHeight = "100%"
+              videoWidth = "100%"
               title="Auto-Battler Project"
               description="It's a game project that I have been working on alone recently which contains basic features of the auto-battler game genre in single player game mode with Unity, including some of the more complex but interesting game systems:
               The A-star algorithm was used to implement a dynamic pathfinding system for the champion during combat, and a finite state machine was used to implement changes in the champion's behaviour in different states, which together implemented the champion's AI system.
@@ -134,9 +138,9 @@ function Projects() {
           </Col>
         </Row>
         <Row style={{ justifyContent: "center", paddingBottom: "20px"}}>
-        <LargeProjectCards
+        <LargeProjectCards 
               videoTitle = "Other Projects"
-              videoLink = ""
+              videoLink = "https://www.youtube.com/embed/skx8nTCCy2A"
               videoHeight = "720"
               videoWidth = "1280"
               // imgPath={chatify}

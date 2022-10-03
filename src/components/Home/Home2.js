@@ -26,18 +26,19 @@ function Home2() {
             During the last two years of my studies in Sweden, I worked as game programmer on a few game projects and had the opportunity to intern as a game programmer at a studio that makes commercial games. 
             
               <br />
-              <br />I'm very familiar with 
+              <br />I have a very solid understanding of 
               <i>
-                <b className="purple"> C# and Unity </b>,
-                and I've worked with <b className="purple"> Unreal and Blueprints </b> before.
+                <b className="purple"> C# and Unity </b>
               </i>
+              , and am comfortable using them to build game projects.
+                I've also worked with <i><b className="purple"> Unreal and Blueprints </b></i> before, and I'm actively learning<i><b className="purple"> C++ </b> </i> at the moment. My next personal project will be to implement some interesting game systems with C++ in Unreal.
               <br />
               <br />
               I have a very strong passion for implementing interesting 
               <i>
                 <b className="purple"> game systems</b>,
-                <b className="purple"> game features</b> and I seek to make the games I develop a very enjoyable and impressive experience for as many players as possible.
-              </i>
+                <b className="purple"> game features</b> </i>and I seek to make the games I develop a very enjoyable and impressive experience for as many players as possible.
+              
               <br />
               <br />
               In the future, I'm eager to work on more interesting game projects.

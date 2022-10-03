@@ -29,8 +29,8 @@ function Projects() {
               videoWidth = "1280"
               // imgPath={chatify}
               title="Receiver 2"
-              description = <h6>My contribution: Implemented new game features, and resolved 20+ miscellaneous game bugs/issues, most of which can be found in this 
-              <a href="https://store.steampowered.com/news/app/1129310/view/3019092467758679460"> game update information </a>
+              description = <h6 style={{lineHeight:1.5}}>My contribution: Implemented new game features, and resolved 20+ miscellaneous game bugs/issues, most of which can be found in this 
+              <a href="https://store.steampowered.com/news/app/1129310/view/3019092467758679460"> game update information </a>.
               Worked with other developers to develop new weapons and new game maps.</h6>  
             />
         </Row>
@@ -144,8 +144,8 @@ function Projects() {
               Call of Wind is a 2d puzzle platformer game that I worked on with other student developers for around two months in 2019, and it won a prize in a student game development competition in China at the time.
               <br></br>
               <br></br>My contribution:
-              <br></br>· Design and implemented wind-related puzzles and game mechanics
-              <br></br>· Constantly optimised and iterated on game details based on player feedback
+              <br></br>· Design and implemented wind-related puzzles and game mechanics.
+              <br></br>· Constantly optimised and iterated on game details based on player feedback.
               </h6>
               //ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
                demoLink="https://jiaqu-wu.itch.io/call-of-wind-v10"      //<--------Please include a demo link here 

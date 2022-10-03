@@ -38,6 +38,7 @@ function Home2() {
               <i>
                 <b className="purple"> game systems</b>,
                 <b className="purple"> game features</b> </i>and I seek to make the games I develop a very enjoyable and impressive experience for as many players as possible.
+              I enjoy the process of <i><b className="purple"> problem solving</b></i> and am keen to learn new knowledge and techniques.
               
               <br />
               <br />

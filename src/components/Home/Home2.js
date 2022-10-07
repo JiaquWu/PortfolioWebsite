@@ -22,11 +22,12 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-            Back in early 2018, I realized that developing games was what I wanted to do most in the future. Then I started teaching myself C# and Unity development from scratch and have developed a lot of <a href="https://jiaqu-wu.itch.io/" className="purple">mini games</a> in numerous Game Jams from then. 
-            During the last two years of my studies in Sweden, I worked as a game programmer on a few game projects and had the opportunity to intern as a game programmer at a studio that makes commercial games. 
-            
+            {/* Back in early 2018, I realized that developing games was what I wanted to do most in the future. Then I started teaching myself C# and Unity development from scratch and have developed a lot of <a href="https://jiaqu-wu.itch.io/" className="purple">mini games</a> in numerous Game Jams from then. 
+            During the last two years of my studies in Sweden, I worked as a game programmer on a few game projects and had the opportunity to intern as a game programmer at a studio that makes commercial games.  */}
+            A few years ago, I came to realize that making games was what I enjoy the most spending my time on. Since then I started teaching myself C# and Unity development starting from zero and have developed a lot of <a href="https://jiaqu-wu.itch.io/" className="purple">mini games</a> in numerous Game Jams. 
+            During my study in Sweden for the last two years, I worked as a game programmer on a few game projects and had the opportunity to intern as a game programmer at Blackdrop Interactive and worked on <a href="https://store.steampowered.com/app/1129310/Receiver_2/" className="purple">Receiver 2</a>
               <br />
-              <br />I have a very solid understanding of 
+              <br />I have a solid understanding of 
               <i>
                 <b className="purple"> C# and Unity </b>
               </i>
@@ -42,7 +43,6 @@ function Home2() {
               
               <br />
               <br />
-              In the future, I'm eager to work on more interesting game projects.
               {/* //<b className="purple"></b> a
               <i>
                 <b className="purple">

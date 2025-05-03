@@ -5,6 +5,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import CodeSnippets from "./components/CodeSnippets/CodeSnippets";
 import Projects from "./components/Projects/Projects";
+import Locomoto from "./components/Locomoto/Locomoto";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import {
@@ -38,6 +39,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
+          <Route path="/Locomoto" element={<Locomoto />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/codesnippets" element={<CodeSnippets />} />

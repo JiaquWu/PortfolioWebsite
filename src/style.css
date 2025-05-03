@@ -441,6 +441,101 @@ button:focus {
 .blockquote-footer {
   color: #a588c0 !important;
 }
+
+
+/* --------- */
+/* Locomoto */
+/* --------- */
+
+.gif-section {
+  max-width: 960px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.gif-toggle-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.25rem;
+  background-color: #262626;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 auto 1rem auto;
+  width: fit-content;
+  border: none;
+}
+
+.gif-toggle-pill:hover {
+  background-color: #3a3a3a;
+  transform: translateY(-2px);
+}
+
+.arrow-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.gif-section.open .arrow-icon {
+  transform: rotate(90deg);
+}
+
+.gif-toggle-label {
+  white-space: nowrap;
+}
+
+.gif-expand-description {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: -0.25rem;
+  margin-bottom: 1rem;
+}
+
+.gif-collapse-wrapper {
+  will-change: max-height, opacity;
+}
+
+.gif-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.gif-item {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gif-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gif-caption {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #444;
+  line-height: 1.4;
+}
+
+
+
+
+
+
 /* --------- */
 /* Projects */
 /* --------- */

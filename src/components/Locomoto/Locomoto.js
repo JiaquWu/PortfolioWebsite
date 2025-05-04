@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Particle from "../Particle";
+import { Container, Row, Col } from "react-bootstrap";
 // import { Container, Row, Col } from "react-bootstrap";
 // import { Card, Button } from "react-bootstrap";
 // import { CgWebsite } from "react-icons/cg";
@@ -130,6 +132,15 @@ const locomotoGifs = [
 
 
 
+const groups = [
+  { key: "TrainControls", title: "Train Controls" },
+  { key: "Crafting", title: "Crafting" },
+  { key: "ResourceLoop", title: "Resource Loop" },
+  { key: "ItemInteraction", title: "Item Interaction" },
+  { key: "SpecialInteraction", title: "Special Interaction" },
+  { key: "GenericInteraction", title: "Generic Interaction" },
+];
+
 
 function GifSection({ title, description, gifs }) {
   const [open, setOpen] = React.useState(false);
@@ -137,6 +148,8 @@ function GifSection({ title, description, gifs }) {
   const previewGifs = gifs.slice(0, previewCount);
 
   return (
+
+    
     <section className="gif-section">
       <div className="gif-preview-header">
         <h3 className="gif-card-title">{title}</h3>
@@ -179,46 +192,104 @@ function GifSection({ title, description, gifs }) {
   );
 }
 
-function Locomoto() {
+const heroGifs = [
+  {src: Fishing, duration: 2000},
+  {src: CraftingResult, duration: 2000},
+  {src: Seat, duration: 2000},
+  {src: Seed, duration: 2000},
+  {src: TrainWallpaper, duration: 2000},
+  {src: TrainPaint, duration: 2000},
+  {src: Shovel, duration: 2000},
+  {src: PickupGarbage, duration: 2000},
+];
+
+
+function HeroSection({ gifs }) {
+  const [idx, setIdx] = useState(0);
+
+  useEffect(() => {
+    // 切换到下一张时，用当前 GIF 的 duration 来定时
+    const handle = setTimeout(() => {
+      setIdx((i) => (i + 1) % gifs.length);
+    }, gifs[idx].duration);
+
+    return () => clearTimeout(handle);
+  }, [idx, gifs]);
+
   return (
-    <div className="locomoto-page">
-      <GifSection
-        title="🚂 Train Controls"
-        description="Implemented a complete train control system, including speed, pressure, routing, and customization."
-        gifs={locomotoGifs.filter(g => g.group === "TrainControls")}
+    <div className="locomoto-hero">
+      <div
+        className="locomoto-hero-bg"
+        style={{ backgroundImage: `url(${gifs[idx].src})` }}
       />
-
-      <GifSection
-        title="🛠 Crafting"
-        description="Developed flexible crafting systems, supporting modular recipes and player customization of items."
-        gifs={locomotoGifs.filter(g => g.group === "Crafting")}
-      />
-
-      <GifSection
-        title="♻️ Resource Loop"
-        description="Built the full gameplay loop of resource gathering, recycling, and exchange for player progression."
-        gifs={locomotoGifs.filter(g => g.group === "ResourceLoop")}
-      />
-
-      <GifSection
-        title="🧱 Item Interaction"
-        description="Coded various interactable items such as furniture, storage, and machines with specific player feedback."
-        gifs={locomotoGifs.filter(g => g.group === "ItemInteraction")}
-      />
-
-      <GifSection
-        title="🎯 Special Interaction"
-        description="Handled unique gameplay features and world interactions such as delivery, exploration and events."
-        gifs={locomotoGifs.filter(g => g.group === "SpecialInteraction")}
-      />
-
-      <GifSection
-        title="⚙️ Generic Interaction"
-        description="Created a powerful, reusable interaction framework used by all harvest, quest, and pickup actions."
-        gifs={locomotoGifs.filter(g => g.group === "GenericInteraction")}
-      />
+      <div className="locomoto-hero-overlay" />
+      {/* ...内部内容层… */}
     </div>
   );
+}
+
+function Locomoto() {
+  return (
+    
+    <div className="locomoto-container">
+      <Particle />
+      
+      
+      
+      
+      {/* 侧边导航栏 */}
+      <nav className="side-nav">
+        {groups.map((g) => (
+          <a key={g.key} href={`#${g.key}`} className="nav-link">
+            {g.title}
+          </a>
+        ))}
+      </nav>
+
+      {/* 主体内容 */}
+      <main className="locomoto-main">
+
+{/* —— 在 Hero 区上方插入 intro 文本 —— */}
+<Container className="home-content" style={{ marginBottom: "2rem" }}>
+      <Row>
+        <Col>
+           <p className="welcome-text">
+             欢迎来到 Locomoto 页面，<br />
+             跟着火车开启你的冒险之旅！
+             我做了以下这些东西：<br />
+             1.<br />
+             2.<br />
+             3.<br />
+             4.
+           </p>
+         </Col>
+       </Row>
+     </Container>
+
+      <HeroSection gifs={heroGifs} interval={8000} />
+
+      <div className="steam-iframe-container">
+  <iframe
+    src="https://store.steampowered.com/widget/2328650/"
+    title="LocomotoSteam"
+    frameBorder="0"
+    width="646"
+    height="190"
+    className="steam-iframe"
+  ></iframe>
+</div>
+        {groups.map((g) => (
+          <section id={g.key} key={g.key} className="gif-section">
+            <GifSection
+              title={g.title}
+              description={`这里是 ${g.title} 模块的演示`}
+              gifs={locomotoGifs.filter((x) => x.group === g.key)}
+            />
+          </section>
+        ))}
+      </main>
+    </div>
+  )
 }
 
 export default Locomoto;

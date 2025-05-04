@@ -23,6 +23,18 @@ function Projects() {
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "20px"}}>
         <LargeProjectCards
+              videoTitle = "Locomoto"
+              videoLink = "https://www.youtube.com/embed/JiR_MJAEnCA"
+              videoHeight = "720"
+              videoWidth = "1280"
+              // imgPath={chatify}
+              title="Locomoto"
+              description = <h6 style={{lineHeight:1.5}}>
+                <i className="purple">Feb 2023 - Now</i><br></br></h6>  
+            />
+        </Row>
+        <Row style={{ justifyContent: "center", paddingBottom: "20px"}}>
+        <LargeProjectCards
               videoTitle = "Receiver 2"
               videoLink = "https://www.youtube.com/embed/g-SgoKBIE24"
               videoHeight = "720"
@@ -36,6 +48,7 @@ function Projects() {
               <br></br>· Worked with other developers to develop new weapons and new game maps.</h6>  
             />
         </Row>
+        
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard

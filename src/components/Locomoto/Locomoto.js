@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Card, Button } from "react-bootstrap";
-import { CgWebsite } from "react-icons/cg";
+// import { Container, Row, Col } from "react-bootstrap";
+// import { Card, Button } from "react-bootstrap";
+// import { CgWebsite } from "react-icons/cg";
 import GifImage from "../GifImage";
 // import ProjectCard from "./components/Projects/ProjectCards";
 // import Particle from "./components/Projects/Particle";
@@ -119,52 +119,62 @@ const locomotoGifs = [
 ];
 
 
-const sectionDescriptions = {
-  TrainControls: "Implemented a complete train control system, including speed, pressure, routing, and customization.",
-  Crafting: "Developed flexible crafting systems, supporting modular recipes and player customization of items.",
-  ResourceLoop: "Built the full gameplay loop of resource gathering, recycling, and exchange for player progression.",
-  ItemInteraction: "Coded various interactable items such as furniture, storage, and machines with specific player feedback.",
-  SpecialInteraction: "Handled unique gameplay features and world interactions such as delivery, exploration and events.",
-  GenericInteraction: "Created a powerful, reusable interaction framework used by all harvest, quest, and pickup actions."
-};
+// const sectionDescriptions = {
+//   TrainControls: "Implemented a complete train control system, including speed, pressure, routing, and customization.",
+//   Crafting: "Developed flexible crafting systems, supporting modular recipes and player customization of items.",
+//   ResourceLoop: "Built the full gameplay loop of resource gathering, recycling, and exchange for player progression.",
+//   ItemInteraction: "Coded various interactable items such as furniture, storage, and machines with specific player feedback.",
+//   SpecialInteraction: "Handled unique gameplay features and world interactions such as delivery, exploration and events.",
+//   GenericInteraction: "Created a powerful, reusable interaction framework used by all harvest, quest, and pickup actions."
+// };
 
-<GifSection
-  title="🚂 TrainControls"
-  description="Train control system including speed, routing, customization..."
-  gifs={locomotoGifs.filter(g => g.group === 'TrainControls')}
-/>
+
+
 
 function GifSection({ title, description, gifs }) {
   const [open, setOpen] = React.useState(false);
+  const previewCount = 2;
+  const previewGifs = gifs.slice(0, previewCount);
 
   return (
-    <section className={`gif-section ${open ? "open" : ""}`}>      
-      <button className="gif-toggle-pill" onClick={() => setOpen(!open)}>
-        <span className="arrow-icon">{open ? "▾" : "▸"}</span>
-        <span className="gif-toggle-label">{title}</span>
-      </button>
-      <p className="gif-expand-description">{description}</p>
-
-      {open && (
-        <div
-          className="gif-collapse-wrapper"
-          style={{
-            maxHeight: "1000px",
-            overflow: "hidden",
-            transition: "max-height 0.6s ease, opacity 0.6s ease",
-            opacity: 1
-          }}
-        >
-          <div className="gif-grid">
-            {gifs.map((gif, index) => (
-              <div className="gif-item" key={index}>
+    <section className="gif-section">
+      <div className="gif-preview-header">
+        <h3 className="gif-card-title">{title}</h3>
+        <p className="gif-card-description">{description}</p>
+      </div>
+      <div
+        className={`gif-grid-container ${open ? "expanded" : "collapsed"}`}
+        onClick={() => setOpen(!open)}
+      >
+        {!open && (
+          <>
+            <div className="gif-grid preview">
+              {previewGifs.map((gif, idx) => (
+                <div className="gif-item preview" key={idx}>
+                  <GifImage src={gif.src} alt={gif.alt} />
+                </div>
+              ))}
+            </div>
+            <div className="preview-overlay">
+              <div className="arrow-group">
+                <span className="overlay-arrow" />
+                <span className="overlay-arrow" />
+                <span className="overlay-arrow" />
+              </div>
+            </div>
+          </>
+        )}
+        {open && (
+          <div className="gif-grid expanded-grid">
+            {gifs.map((gif, idx) => (
+              <div className="gif-item full" key={idx}>
                 <GifImage src={gif.src} alt={gif.alt} />
                 <p className="gif-caption">{gif.caption}</p>
               </div>
             ))}
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </section>
   );
 }

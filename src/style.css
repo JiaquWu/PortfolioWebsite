@@ -447,93 +447,172 @@ button:focus {
 /* Locomoto */
 /* --------- */
 
+.locomoto-gif-small {
+  width: 800px;
+  height: 450px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 .gif-section {
   max-width: 960px;
   margin: 4rem auto;
   padding: 0 1rem;
-  text-align: center;
 }
-
-.gif-toggle-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.65rem 1.25rem;
-  background-color: #262626;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  color: #fff;
-  font-weight: 600;
-  font-size: 1rem;
-  margin: 0 auto 1rem auto;
-  width: fit-content;
-  border: none;
-}
-
-.gif-toggle-pill:hover {
-  background-color: #3a3a3a;
-  transform: translateY(-2px);
-}
-
-.arrow-icon {
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-}
-
-.gif-section.open .arrow-icon {
-  transform: rotate(90deg);
-}
-
-.gif-toggle-label {
-  white-space: nowrap;
-}
-
-.gif-expand-description {
-  font-size: 0.95rem;
-  color: #666;
-  margin-top: -0.25rem;
+.gif-preview-header {
   margin-bottom: 1rem;
+  text-align: left;
 }
-
-.gif-collapse-wrapper {
-  will-change: max-height, opacity;
+.gif-card-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--imp-text-color);
 }
-
-.gif-grid {
+.gif-card-description {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: white;
+}
+.gif-grid-container {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: height 0.5s ease;
+}
+.gif-grid-container.collapsed {
+  height: calc(450px * 0.5);
+}
+.gif-grid-container.expanded {
+  height: auto;
+}
+.gif-grid.preview {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px;
+}
+.gif-item.preview {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.gif-item.preview img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.preview-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(450px * 0.5);
+  background: linear-gradient(
+    to top,
+    rgba(255,255,255,1) 0%,    /* 底部完全遮罩 */
+    rgba(255,255,255,0) 50%,   /* 中间 50% 处完全透明 */
+    rgba(255,255,255,0) 100%   /* 以上区域保持透明 */
+  );
+  display: flex;
+  align-items: flex-end;
   justify-content: center;
-  margin-top: 1rem;
+  pointer-events: none;
+}
+.arrow-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 0.5rem;
+  animation: arrowMotion 1s infinite ease-in-out;
+}
+.overlay-arrow {
+  width: 16px;
+  height: 16px;
+  border-left: 4px solid white;
+  border-bottom: 4px solid white;
+  transform: rotate(-45deg)
+}
+.overlay-arrow:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.overlay-arrow:nth-child(3) {
+  animation-delay: 0.3s;
 }
 
-.gif-item {
-  width: 450px;
+@keyframes arrowMotion {
+  0% { transform:  translateY(-8px); }
+  50% { transform:  translateY(0); }
+  100% { transform:  translateY(-8px); }
+}
+.overlay-arrow:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.overlay-arrow:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.overlay-arrow:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.overlay-arrow:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+.gif-grid.expanded-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 1rem 0;
+}
+.gif-item.full {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
-.gif-item img {
+.gif-item.full img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
-
 .gif-caption {
+  margin: 0.5rem 0 0;
   font-size: 14px;
-  margin-top: 8px;
   color: #444;
   line-height: 1.4;
 }
 
+.gif-card-wrapper {
+  overflow: hidden;
+  transition: max-height 0.6s ease, padding-bottom 0.6s ease;
+}
 
+.gif-card-wrapper.collapsed {
+  max-height: 360px;    /* 折叠时高度：标题 + 预览部分总高，可按需微调 */
+  padding-bottom: 1rem;
+}
 
+.gif-card-wrapper.expanded {
+  max-height: 2000px;   /* 展开时足够大，保证内容完全显示 */
+  padding-bottom: 2rem;
+}
 
+.gif-section-title {
+  /* 使用你网站的紫色变量或直接写十六进制值 */
+  color: var(--project-purple) !important;
+}
+
+/* White for all other text on this page */
+.gif-section-desc,
+.gif-caption {
+  color: #FFFFFF !important;
+}
 
 
 /* --------- */

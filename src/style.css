@@ -536,11 +536,12 @@ div.locomoto-intro.left-align > p.home-about-body {
 }
 
 .locomoto-hero {
-    position: relative;
-    width: clamp(600px, 80vw, 1000px);
-    aspect-ratio: 16 / 9;
-    margin: 0 auto 1rem;
-    overflow: hidden;
+  position: relative;
+  /* 下移到页眉下面：64px 页眉 + 16px 缓冲 */
+  margin: 80px auto 1rem;
+  width: clamp(600px, 80vw, 1000px);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
 }
 
 /* —— GIF 图像层 —— */

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef,useState } from "react";
 import Particle from "../Particle";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container} from "react-bootstrap";
 // import { Container, Row, Col } from "react-bootstrap";
 // import { Card, Button } from "react-bootstrap";
 // import { CgWebsite } from "react-icons/cg";
@@ -287,16 +287,7 @@ function Locomoto() {
       
 
           <HeroSection gifs={heroGifs} interval={8000} />
-          <div className="steam-iframe-container">
-              <iframe
-                  src="https://store.steampowered.com/widget/2328650/"
-                  title="LocomotoSteam"
-                  frameBorder="0"
-                  width="646"
-                  height="190"
-                  className="steam-iframe"
-              ></iframe>
-          </div>
+
           <main className="locomoto-main">
 
               <div className="locomoto-intro left-align">
@@ -312,6 +303,17 @@ function Locomoto() {
                       See below for specific examples of the gameplay systems I developed.
                   </p>
               </div>
+          <div className="steam-iframe-container">
+              <iframe
+                  src="https://store.steampowered.com/widget/2328650/"
+                  title="LocomotoSteam"
+                  frameBorder="0"
+                  width="646"
+                  height="190"
+                  className="steam-iframe"
+              ></iframe>
+          </div>
+          
       
         {groups.map((g) => (
           <section id={g.key} key={g.key} className="gif-section">

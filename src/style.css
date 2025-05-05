@@ -449,9 +449,57 @@ button:focus {
 
 
 /* ==== 页面布局 ==== */
-.locomoto-container {
-    display: flex;
+/* —— Left-aligned, multi-paragraph intro —— */
+.locomoto-intro.left-align {
+    max-width: 960px;
+    margin: 2rem auto 3rem;
+    padding: 0 1rem;
+    text-align: left;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.locomoto-intro-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.locomoto-intro a {
+    pointer-events: auto !important;
+    z-index: 9999 !important;
     position: relative;
+}
+
+/* Purple highlight (use your existing purple class) */
+.purple {
+    color: var(--project-purple); /* or your hex code */
+    font-style: normal; /* if you want italic, also add .italic */
+}
+
+/* White body text */
+.white-text {
+    color: #FFFFFF;
+}
+.home-about-body {
+    color: #FFFFFF;
+    font-size: 1.2em !important;
+    text-align: left;
+    margin-bottom: 0.5rem; /* 你可以根据需要调小或调大 */
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.locomoto-intro.left-align .home-about-body {
+  font-size: 1rem !important;     /* 比原来 1.2em 小一点 */
+  line-height: 1.4 !important;    /* 比原来 1.6 缩紧 */
+}
+
+div.locomoto-intro.left-align > p.home-about-body {
+    /* remove any top padding you may have inherited */
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    /* set a small uniform gap above & below each paragraph */
+    margin: 0.5rem 0 !important;
 }
 
 .side-nav {
@@ -508,16 +556,6 @@ button:focus {
     z-index: 0;
 }
 
-    /* 淡出 */
-    .hero-img.fade-out {
-        opacity: 0;
-    }
-
-    /* 淡入 */
-    .hero-img.fade-in {
-        opacity: 1;
-    }
-
 /* —— 内容层 —— */
 .locomoto-hero-content-wrapper {
     position: relative;
@@ -533,6 +571,18 @@ button:focus {
     margin: 0 auto;
     padding: 0 1rem;
 }
+
+
+/* 淡出 */
+.hero-img.fade-out {
+    opacity: 0;
+}
+
+/* 淡入 */
+.hero-img.fade-in {
+    opacity: 1;
+}
+
 
 .heading-name {
     color: #fff;
@@ -771,6 +821,7 @@ button:focus {
 .gif-caption {
   color: #FFFFFF !important;
 }
+
 
 
 

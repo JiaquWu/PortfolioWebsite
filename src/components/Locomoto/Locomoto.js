@@ -71,54 +71,54 @@ import GenericInteraction from "../../Assets/LocomotoAssets/GenericInteraction.p
 
 const locomotoGifs = [
   { src: BreakInteraction, alt: "BreakInteraction", group: "ResourceLoop", caption: "Player plans train routes through a node system." },
-  { src: Chop, alt: "Chop", group: "GenericInteraction" },
-  { src: CoalWagon, alt: "CoalWagon", group: "TrainControls" },
-  { src: Combine, alt: "Combine", group: "GenericInteraction" },
-  { src: CommunityBoard, alt: "CommunityBoard", group: "SpecialInteraction" },
-  { src: CraftingRecipes, alt: "CraftingRecipes", group: "Crafting" },
-  { src: CraftingResoucePlacement, alt: "CraftingResoucePlacement", group: "Crafting" },
-  { src: CraftingResult, alt: "CraftingResult", group: "Crafting" },
-  { src: Delivery1, alt: "Delivery1", group: "ResourceLoop" },
-  { src: Delivery2, alt: "Delivery2", group: "ResourceLoop" },
-  { src: DeliveryBox, alt: "DeliveryBox", group: "SpecialInteraction" },
-  { src: EnginePressureSettting, alt: "EnginePressureSettting", group: "TrainControls" },
-  { src: FancySeatCraftingPattern, alt: "FancySeatCraftingPattern", group: "Crafting" },
-  { src: FancySeatIV, alt: "FancySeatIV", group: "Crafting" },
-  { src: Fishing, alt: "Fishing", group: "SpecialInteraction" },
-  { src: Fume, alt: "Fume", group: "GenericInteraction" },
-  { src: GarbageToken, alt: "GarbageToken", group: "ResourceLoop" },
-  { src: HotCocoaMachine, alt: "HotCocoaMachine", group: "ItemInteraction" },
-  { src: HouseSign, alt: "HouseSign", group: "GenericInteraction" },
-  { src: MapStamp, alt: "MapStamp", group: "GenericInteraction" },
-  { src: Mine, alt: "Mine", group: "GenericInteraction" },
-  { src: MirrorPattern1, alt: "MirrorPattern1", group: "Crafting" },
-  { src: MirrorPattern2, alt: "MirrorPattern2", group: "Crafting" },
-  { src: NPCHungerSetting, alt: "NPCHungerSetting", group: "ResourceLoop" },
-  { src: NPCLeaveToken, alt: "NPCLeaveToken", group: "ResourceLoop" },
-  { src: NPCService, alt: "NPCService", group: "ResourceLoop" },
-  { src: PickupGarbage, alt: "PickupGarbage", group: "ResourceLoop" },
-  { src: Pinwheel, alt: "Pinwheel", group: "ItemInteraction" },
-  { src: PressureExplode, alt: "PressureExplode", group: "TrainControls" },
-  { src: Repair, alt: "Repair", group: "GenericInteraction" },
-  { src: RoutePlanner, alt: "RoutePlanner", group: "TrainControls" },
-  { src: Seat, alt: "Seat", group: "ItemInteraction" },
-  { src: Seed, alt: "Seed", group: "SpecialInteraction" },
-  { src: ShakeTree, alt: "ShakeTree", group: "GenericInteraction" },
-  { src: Shelf, alt: "Shelf", group: "ItemInteraction" },
-  { src: Shovel, alt: "Shovel", group: "GenericInteraction" },
-  { src: ShovelCoal, alt: "ShovelCoal", group: "TrainControls" },
-  { src: StartTrian, alt: "StartTrian", group: "TrainControls" },
-  { src: TableFold, alt: "TableFold", group: "ItemInteraction" },
-  { src: ToiletDoor, alt: "ToiletDoor", group: "GenericInteraction" },
-  { src: TokenExchange, alt: "TokenExchange", group: "ResourceLoop" },
-  { src: ToolStorage, alt: "ToolStorage", group: "ItemInteraction" },
-  { src: TrainFastSpeed, alt: "TrainFastSpeed", group: "TrainControls" },
-  { src: TrainPaint, alt: "TrainPaint", group: "Customization" },
-  { src: TrainWallpaper, alt: "TrainWallpaper", group: "Customization" },
-  { src: TreasureBox, alt: "TreasureBox", group: "GenericInteraction" },
-  { src: WallpaperPaintStorage, alt: "WallpaperPaintStorage", group: "ItemInteraction" },
-  { src: Whistle, alt: "Whistle", group: "TrainControls" },
-  { src: GenericInteraction, alt: "GenericInteraction", group: "GenericInteraction" }
+    { src: Chop, alt: "Chop", group: "GenericInteraction", caption: "Player plans train routes through a node system." },
+    { src: CoalWagon, alt: "CoalWagon", group: "TrainControls", caption: "Player plans train routes through a node system." },
+    { src: Combine, alt: "Combine", group: "GenericInteraction", caption: "Player plans train routes through a node system." },
+    { src: CommunityBoard, alt: "CommunityBoard", group: "SpecialInteraction", caption: "Player plans train routes through a node system." },
+    { src: CraftingRecipes, alt: "CraftingRecipes", group: "Crafting", caption: "Player plans train routes through a node system." },
+    { src: CraftingResoucePlacement, alt: "CraftingResoucePlacement", group: "Crafting", caption: "Player plans train routes through a node system." },
+    { src: CraftingResult, alt: "CraftingResult", group: "Crafting", caption: "Player plans train routes through a node system." },
+    { src: Delivery1, alt: "Delivery1", group: "ResourceLoop", caption: "Player plans train routes through a node system." },
+    { src: Delivery2, alt: "Delivery2", group: "ResourceLoop", caption: "Player plans train routes through a node system." },
+    { src: DeliveryBox, alt: "DeliveryBox", group: "SpecialInteraction", caption: "Player plans train routes through a node system." },
+    { src: EnginePressureSettting, alt: "EnginePressureSettting", group: "TrainControls", caption: "Player plans train routes through a node system." },
+    { src: FancySeatCraftingPattern, alt: "FancySeatCraftingPattern", group: "Crafting", caption: "Player plans train routes through a node system." },
+    { src: FancySeatIV, alt: "FancySeatIV", group: "Crafting", caption: "Player plans train routes through a node system." },
+    { src: Fishing, alt: "Fishing", group: "SpecialInteraction", caption: "Player plans train routes through a node system." },
+    { src: Fume, alt: "Fume", group: "GenericInteraction", caption: "Player plans train routes through a node system." },
+    { src: GarbageToken, alt: "GarbageToken", group: "ResourceLoop", caption: "Player plans train routes through a node system." },
+    { src: HotCocoaMachine, alt: "HotCocoaMachine", group: "ItemInteraction", caption: "Player plans train routes through a node system." },
+    { src: HouseSign, alt: "HouseSign", group: "GenericInteraction", caption: "Player plans train routes through a node system." },
+    { src: MapStamp, alt: "MapStamp", group: "GenericInteraction", caption: "Player plans train routes through a node system." },
+    { src: Mine, alt: "Mine", group: "GenericInteraction", caption: "Player plans train routes through a node system." },
+    { src: MirrorPattern1, alt: "MirrorPattern1", group: "Crafting", caption: "Player plans train routes through a node system." },
+    { src: MirrorPattern2, alt: "MirrorPattern2", group: "Crafting", caption: "Player plans train routes through a node system." },
+    { src: NPCHungerSetting, alt: "NPCHungerSetting", group: "ResourceLoop", caption: "Player plans train routes through a node system." },
+    { src: NPCLeaveToken, alt: "NPCLeaveToken", group: "ResourceLoop", caption: "Player plans train routes through a node system." },
+    { src: NPCService, alt: "NPCService", group: "ResourceLoop", caption: "Player plans train routes through a node system." },
+    { src: PickupGarbage, alt: "PickupGarbage", group: "ResourceLoop", caption: "Player plans train routes through a node system." },
+    { src: Pinwheel, alt: "Pinwheel", group: "ItemInteraction", caption: "Player plans train routes through a node system." },
+    { src: PressureExplode, alt: "PressureExplode", group: "TrainControls", caption: "Player plans train routes through a node system." },
+    { src: Repair, alt: "Repair", group: "GenericInteraction", caption: "Player plans train routes through a node system." },
+    { src: RoutePlanner, alt: "RoutePlanner", group: "TrainControls", caption: "Player plans train routes through a node system." },
+    { src: Seat, alt: "Seat", group: "ItemInteraction", caption: "Player plans train routes through a node system." },
+    { src: Seed, alt: "Seed", group: "SpecialInteraction", caption: "Player plans train routes through a node system." },
+    { src: ShakeTree, alt: "ShakeTree", group: "GenericInteraction", caption: "Player plans train routes through a node system." },
+    { src: Shelf, alt: "Shelf", group: "ItemInteraction", caption: "Player plans train routes through a node system." },
+    { src: Shovel, alt: "Shovel", group: "GenericInteraction", caption: "Player plans train routes through a node system." },
+    { src: ShovelCoal, alt: "ShovelCoal", group: "TrainControls", caption: "Player plans train routes through a node system." },
+    { src: StartTrian, alt: "StartTrian", group: "TrainControls", caption: "Player plans train routes through a node system." },
+    { src: TableFold, alt: "TableFold", group: "ItemInteraction", caption: "Player plans train routes through a node system." },
+    { src: ToiletDoor, alt: "ToiletDoor", group: "GenericInteraction", caption: "Player plans train routes through a node system." },
+    { src: TokenExchange, alt: "TokenExchange", group: "ResourceLoop", caption: "Player plans train routes through a node system." },
+    { src: ToolStorage, alt: "ToolStorage", group: "ItemInteraction", caption: "Player plans train routes through a node system." },
+    { src: TrainFastSpeed, alt: "TrainFastSpeed", group: "TrainControls", caption: "Player plans train routes through a node system." },
+    { src: TrainPaint, alt: "TrainPaint", group: "Customization", caption: "Player plans train routes through a node system." },
+    { src: TrainWallpaper, alt: "TrainWallpaper", group: "Customization", caption: "Player plans train routes through a node system." },
+    { src: TreasureBox, alt: "TreasureBox", group: "GenericInteraction", caption: "Player plans train routes through a node system." },
+    { src: WallpaperPaintStorage, alt: "WallpaperPaintStorage", group: "ItemInteraction", caption: "Player plans train routes through a node system." },
+    { src: Whistle, alt: "Whistle", group: "TrainControls", caption: "Player plans train routes through a node system." },
+    { src: GenericInteraction, alt: "GenericInteraction", group: "GenericInteraction", caption: "Player plans train routes through a node system." }
 ];
 
 
@@ -197,11 +197,11 @@ const heroGifs = [
   {src: Fishing, duration: 2000},
   {src: CraftingResult, duration: 3000},
   {src: Seat, duration: 3100},
-  {src: Seed, duration: 3400},
+  {src: Seed, duration: 3500},
   {src: TrainWallpaper, duration: 3500},
   {src: TrainPaint, duration: 1900},
   {src: Shovel, duration: 4200},
-  { src: PickupGarbage, duration: 2200 },
+  { src: PickupGarbage, duration: 2300 },
   { src: ShovelCoal, duration: 2200 },
     { src: RoutePlanner, duration: 2800 },
     { src: Shelf, duration: 3000 },
@@ -284,37 +284,35 @@ function Locomoto() {
       </nav>
 
       {/* 主体内容 */}
-      <main className="locomoto-main">
+      
 
-{/* —— 在 Hero 区上方插入 intro 文本 —— */}
-<Container className="home-content" style={{ marginBottom: "2rem" }}>
-      <Row>
-        <Col>
-           <p className="welcome-text">
-             欢迎来到 Locomoto 页面，<br />
-             跟着火车开启你的冒险之旅！
-             我做了以下这些东西：<br />
-             1.<br />
-             2.<br />
-             3.<br />
-             4.
-           </p>
-         </Col>
-       </Row>
-     </Container>
+          <HeroSection gifs={heroGifs} interval={8000} />
+          <div className="steam-iframe-container">
+              <iframe
+                  src="https://store.steampowered.com/widget/2328650/"
+                  title="LocomotoSteam"
+                  frameBorder="0"
+                  width="646"
+                  height="190"
+                  className="steam-iframe"
+              ></iframe>
+          </div>
+          <main className="locomoto-main">
 
-      <HeroSection gifs={heroGifs} interval={8000} />
+              <div className="locomoto-intro left-align">
+                  <p className="home-about-body white-text">
+                      <b className="purple">Locomoto</b> is a cozy life-simulation adventure game, which launched on <a href="https://store.steampowered.com/app/2328650/Locomoto/" className="purple">Steam</a> in April 2025 and will release on  <a href="https://eu.store.thqnordic.com/en/Locomoto-NSW/9120131602940" className="purple">Nintendo Switch</a> in upcoming 2025. As the <b className="purple">Gameplay Programmer</b>, I was responsible for implementing and refining most of the core gameplay mechanics and systems—including train controls, passenger interactions and AI, resource loops, crafting systems, and various customizable interactive items and features. Throughout the project, I worked closely and proactively with designers and artists, rapidly prototyping features, building specialized tools to streamline our development process, and iteratively polishing gameplay elements to deliver a relaxing and engaging player experience.
+                  </p>
 
-      <div className="steam-iframe-container">
-  <iframe
-    src="https://store.steampowered.com/widget/2328650/"
-    title="LocomotoSteam"
-    frameBorder="0"
-    width="646"
-    height="190"
-    className="steam-iframe"
-  ></iframe>
-</div>
+                  <p className="home-about-body white-text">
+                      My approach to programming emphasizes high-quality, maintainable, and extensible code. I proactively minimized bugs through rigorous testing and immediate fixes, and structured my implementations to ensure flexibility, allowing substantial feature changes with minimal code adjustments. Additionally, I effectively utilized industry-standard Unity plugins including Cinemachine, DoTween, Dialogue System, Behavior Designer, Easy Save, More Mountains Feedback, Doozy UI System and Grid Placement System, significantly enhancing development efficiency and gameplay polish.
+                  </p>
+
+                  <p className="home-about-body white-text">
+                      See below for specific examples of the gameplay systems I developed.
+                  </p>
+              </div>
+      
         {groups.map((g) => (
           <section id={g.key} key={g.key} className="gif-section">
             <GifSection

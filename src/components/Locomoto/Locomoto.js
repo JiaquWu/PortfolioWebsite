@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef,useState } from "react";
 import Particle from "../Particle";
 import { Container, Row, Col } from "react-bootstrap";
 // import { Container, Row, Col } from "react-bootstrap";
@@ -67,6 +67,7 @@ import TreasureBox from "../../Assets/LocomotoAssets/TreasureBox.gif";
 import WallpaperPaintStorage from "../../Assets/LocomotoAssets/WallpaperPaintStorage.gif";
 import Whistle from "../../Assets/LocomotoAssets/Whistle.gif";
 import GenericInteraction from "../../Assets/LocomotoAssets/GenericInteraction.png";
+
 
 const locomotoGifs = [
   { src: BreakInteraction, alt: "BreakInteraction", group: "ResourceLoop", caption: "Player plans train routes through a node system." },
@@ -194,39 +195,75 @@ function GifSection({ title, description, gifs }) {
 
 const heroGifs = [
   {src: Fishing, duration: 2000},
-  {src: CraftingResult, duration: 2000},
-  {src: Seat, duration: 2000},
-  {src: Seed, duration: 2000},
-  {src: TrainWallpaper, duration: 2000},
-  {src: TrainPaint, duration: 2000},
-  {src: Shovel, duration: 2000},
-  {src: PickupGarbage, duration: 2000},
+  {src: CraftingResult, duration: 3000},
+  {src: Seat, duration: 3100},
+  {src: Seed, duration: 3400},
+  {src: TrainWallpaper, duration: 3500},
+  {src: TrainPaint, duration: 1900},
+  {src: Shovel, duration: 4200},
+  { src: PickupGarbage, duration: 2200 },
+  { src: ShovelCoal, duration: 2200 },
+    { src: RoutePlanner, duration: 2800 },
+    { src: Shelf, duration: 3000 },
+    { src: MapStamp, duration: 3000 },
+    { src: Pinwheel, duration: 3000 }
 ];
 
 
-function HeroSection({ gifs }) {
-  const [idx, setIdx] = useState(0);
+function HeroSection({ gifs, fadeDuration = 300}) {
+    const [idx, setIdx] = useState(0);
+    const [phase, setPhase] = useState("visible"); // "visible" | "fadingOut" | "fadingIn"
+    const imgRef = useRef();
 
-  useEffect(() => {
-    // 切换到下一张时，用当前 GIF 的 duration 来定时
-    const handle = setTimeout(() => {
-      setIdx((i) => (i + 1) % gifs.length);
-    }, gifs[idx].duration);
+    // 预加载所有 GIF
+    useEffect(() => {
+        gifs.forEach((g) => new Image().src = g.src);
+    }, [gifs]);
 
-    return () => clearTimeout(handle);
-  }, [idx, gifs]);
+    // 启动播放／切换逻辑
+    useEffect(() => {
+        let playTimer;
 
-  return (
-    <div className="locomoto-hero">
-      <div
-        className="locomoto-hero-bg"
-        style={{ backgroundImage: `url(${gifs[idx].src})` }}
-      />
-      <div className="locomoto-hero-overlay" />
-      {/* ...内部内容层… */}
-    </div>
-  );
+        if (phase === "visible") {
+            // 播放完整张 GIF，然后进入淡出
+            playTimer = setTimeout(() => setPhase("fadingOut"), gifs[idx].duration - fadeDuration);
+        } else if (phase === "fadingOut") {
+            // 在淡出阶段结束时，切到下一张并进入淡入
+            playTimer = setTimeout(() => {
+                setIdx((i) => (i + 1) % gifs.length);
+                setPhase("fadingIn");
+            }, fadeDuration);
+        } else if (phase === "fadingIn") {
+            // 淡入完成后回到可见阶段
+            playTimer = setTimeout(() => setPhase("visible"), fadeDuration);
+        }
+
+        return () => clearTimeout(playTimer);
+    }, [phase, idx, gifs, fadeDuration]);
+
+    // 根据 phase 添加不同的 class
+    const cls =
+        phase === "fadingOut"
+            ? "hero-img fade-out"
+            : phase === "fadingIn"
+                ? "hero-img fade-in"
+                : "hero-img";
+
+    return (
+        <div className="locomoto-hero">
+            <img
+                ref={imgRef}
+                src={gifs[idx].src}
+                alt=""
+                className={cls}
+            />
+            <Container fluid className="locomoto-hero-content-wrapper">
+                {/* …在这里放文字、Steam iframe 等… */}
+            </Container>
+        </div>
+    );
 }
+
 
 function Locomoto() {
   return (

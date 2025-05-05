@@ -450,261 +450,300 @@ button:focus {
 
 /* ==== 页面布局 ==== */
 .locomoto-container {
-  display: flex;
-  position: relative;
+    display: flex;
+    position: relative;
 }
 
-/* —— 侧边悬浮导航 —— */
 .side-nav {
-  position: fixed;
-  top: 50%;                    /* 垂直居中定位点 */
-  left: 40px;                  /* 离左侧边缘 10px 间隙 */
-  transform: translateY(-50%); /* 将自身向上移动半个自身高度，真正实现居中 */
-  width: 200px;
-  max-height: calc(100vh - 40px); /* 上下各留 20px 空隙 */
-  overflow-y: auto;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  scroll-behavior: smooth;
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 200px;
+    padding: 1rem;
+    background: rgba(255,255,255,0.2);
+    border-radius: 8px;
+    overflow-y: auto;
+    z-index: 10;
 }
 
-.side-nav::-webkit-scrollbar {
-  width: 6px;
-}
-.side-nav::-webkit-scrollbar-track {
-  background: transparent;
-}
-.side-nav::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.4);
-  border-radius: 3px;
-}
-.side-nav a {
-  display: block;
-  margin-bottom: 1rem;
-  text-decoration: none;
-  font-family: var(--project-font);
-  font-size: 1rem;
-  color: rgb(255, 255, 255);
-  transition: color 0.2s, font-weight 0.2s;
-}
-.side-nav a:hover,
-.side-nav a.active {
-  color: #ffffff;
-  font-weight: 700;
-}
+    .side-nav a {
+        display: block;
+        margin-bottom: 1rem;
+        color: #fff;
+        text-decoration: none;
+    }
 
-/* 主体内容始终居中，不需要留给侧边栏的 margin */
+        .side-nav a.active,
+        .side-nav a:hover {
+            font-weight: 700;
+            color: var(--imp-text-color);
+        }
+
 .locomoto-main {
-  max-width: 960px;  /* 与你内容宽度保持一致 */
-  margin: 0 auto;
-  padding: 2rem 0;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
-/* —— 平滑滚动 —— */
-html {
-  scroll-behavior: smooth;
-}
-
-/* —— 英雄区 整体按 16∶9 拉伸 —— */
 .locomoto-hero {
-  position: relative;
-  width: 100%;
-  max-width: 1600px;   /* 最大扩到 1600px */
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  margin-bottom: 2rem;  /* 这里的 2rem 可以根据需要调大或调小 */
-  margin-top: 2rem;
+    position: relative;
+    width: clamp(600px, 80vw, 1000px);
+    aspect-ratio: 16 / 9;
+    margin: 0 auto 1rem;
+    overflow: hidden;
 }
 
-/* 背景 & 遮罩 同前 */
-.locomoto-hero-bg {
-  position: absolute; top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-  transition: background-image 1s ease-in-out;
-}
-.locomoto-hero-overlay {
-  position: absolute; top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.1);
-  z-index: 1;
+/* —— GIF 图像层 —— */
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+    z-index: 0;
 }
 
-/* —— 内容限宽居中 —— */
+    /* 淡出 */
+    .hero-img.fade-out {
+        opacity: 0;
+    }
+
+    /* 淡入 */
+    .hero-img.fade-in {
+        opacity: 1;
+    }
+
+/* —— 内容层 —— */
 .locomoto-hero-content-wrapper {
-  height: 100%;              /* 继承父元素的 16:9 */
-  display: flex;
-  align-items: center;       /* 垂直居中 */
-  z-index: 10;
-}
-.home-content {
-  max-width: 1200px;         /* 你希望的最大宽度，比如 1200px */
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;           /* 两侧留白 */
-  z-index: 1;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.steam-iframe-container {
-  position: relative;
-  z-index: 10;   /* 确保高于默认的 #tsparticles */
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
+.home-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.heading-name {
+    color: #fff;
+    margin: 0;
+}
+
+.main-name {
+    color: var(--imp-text-color);
 }
 
 .welcome-text {
-  font-size: 1.2rem;           /* 正常正文大小 */
-  line-height: 1.6;          /* 合理的行高 */
-  color: #ffffff;               /* 或者你站点正文色 */
-  margin: 0;
-  padding-bottom: 1.5rem;    /* 底部留白 */
+    font-size: 1rem;
+    color: #fff;
+    margin: 1rem 0;
 }
 
-.locomoto-gif-small {
-  width: 800px;
-  height: 450px;
-  object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+.wave {
+    display: inline-block;
+    animation: wave-animation 2s infinite;
+    transform-origin: 70% 70%;
 }
 
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0deg);
+    }
 
+    10% {
+        transform: rotate(14deg);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        transform: rotate(14deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60%, 100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* —— Steam Widget：紧跟 Hero 区 —— */
+.steam-iframe-container {
+    position: relative;
+    z-index: 10; /* 确保高于默认的 #tsparticles */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* —— 第一个 GIF Section：让它更靠近顶部，露出一小条 —— */
 .gif-section {
-  max-width: 960px;
-  margin: 4rem auto;
-  padding: 0 1rem;
-  scroll-margin-top: 100px;
+    margin: 0 auto 4rem; /* 上面去掉大段 margin，让它抬高一点 */
+    padding: 0 1rem;
+    scroll-margin-top: 100px;
 }
+
 .gif-preview-header {
-  margin-bottom: 1rem;
-  text-align: left;
+    margin-bottom: 1rem;
 }
+
 .gif-card-title {
-  margin: 0;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--imp-text-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--imp-text-color);
 }
+
 .gif-card-description {
-  margin: 0.25rem 0;
-  font-size: 0.95rem;
-  color: white;
+    color: #fff;
+    font-size: 0.95rem;
 }
+
 .gif-grid-container {
-  position: relative;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: height 0.5s ease;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: height 0.5s ease;
 }
-.gif-grid-container.collapsed {
-  height: calc(450px * 0.5);
-}
-.gif-grid-container.expanded {
-  height: auto;
-}
+
+    .gif-grid-container.collapsed {
+        height: 225px;
+    }
+
+    .gif-grid-container.expanded {
+        height: auto;
+    }
+
 .gif-grid.preview {
-  display: flex;
-  gap: 16px;
+    display: flex;
+    gap: 16px;
 }
-.gif-item.preview {
-  flex: 1;
-  overflow: hidden;
-  position: relative;
-}
+
 .gif-item.preview img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
+
 .preview-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: calc(450px * 0.5);
-  background: linear-gradient(
-    to top,
-    rgba(255,255,255,1) 0%,    /* 底部完全遮罩 */
-    rgba(255,255,255,0) 50%,   /* 中间 50% 处完全透明 */
-    rgba(255,255,255,0) 100%   /* 以上区域保持透明 */
-  );
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 225px;
+    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
+    pointer-events: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
-.arrow-group {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 0.5rem;
-  animation: arrowMotion 1s infinite ease-in-out;
-}
+
 .overlay-arrow {
-  width: 16px;
-  height: 16px;
-  border-left: 4px solid white;
-  border-bottom: 4px solid white;
-  transform: rotate(-45deg)
-}
-.overlay-arrow:nth-child(2) {
-  animation-delay: 0.15s;
-}
-.overlay-arrow:nth-child(3) {
-  animation-delay: 0.3s;
+    width: 16px;
+    height: 16px;
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+    transform: rotate(-45deg);
+    animation: arrowMotion 1s infinite ease-in-out;
 }
 
 @keyframes arrowMotion {
-  0% { transform:  translateY(-8px); }
-  50% { transform:  translateY(0); }
-  100% { transform:  translateY(-8px); }
+    0%,100% {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(-45deg);
+    }
 }
-.overlay-arrow:nth-child(2) {
-  animation-delay: 0.15s;
-}
-.overlay-arrow:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.overlay-arrow:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.overlay-arrow:nth-child(3) {
-  animation-delay: 0.4s;
-}
-@keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
-}
+
 .gif-grid.expanded-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+    padding: 1rem 0;
 }
-.gif-item.full {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+
 .gif-item.full img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
+
 .gif-caption {
-  margin: 0.5rem 0 0;
-  font-size: 14px;
-  color: #444;
-  line-height: 1.4;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .locomoto-container {
+        flex-direction: column;
+    }
+
+    .side-nav {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-bottom: 1rem;
+        display: flex;
+        overflow-x: auto;
+        padding: 0.5rem;
+    }
+
+        .side-nav a {
+            margin-right: 1rem;
+        }
+
+    .locomoto-main {
+        padding: 1rem;
+    }
+
+    .locomoto-hero {
+        width: 100%;
+        height: 40vh;
+        aspect-ratio: auto;
+    }
+
+    .locomoto-hero-content-wrapper .row {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content {
+        padding: 1rem 0;
+    }
+
+    .steam-iframe-container {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    .gif-grid.preview {
+        flex-direction: column;
+    }
 }
 
 .gif-card-wrapper {

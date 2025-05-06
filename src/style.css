@@ -402,10 +402,12 @@ button:focus {
 /* Footer */
 /* --------- */
 .footer {
-  background-color: rgb(10, 4, 22);
-  bottom: 0 !important;
-  padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+    position: relative;
+    z-index: 10;
+    background-color: rgb(10, 4, 22);
+    bottom: 0 !important;
+    padding-top: 10px !important;
+    padding-bottom: 8px !important;
 }
 .footer-copywright {
   text-align: center !important;
@@ -451,12 +453,14 @@ button:focus {
 /* ==== 页面布局 ==== */
 /* —— Left-aligned, multi-paragraph intro —— */
 .locomoto-intro.left-align {
-    max-width: 960px;
-    margin: 2rem auto 3rem;
-    padding: 0 1rem;
+    /*max-width: 960px;
+    margin: 2rem auto 3rem;*/
+    /*padding: 0 1rem;*/
     text-align: left;
     z-index: 10;
     pointer-events: auto;
+    width: clamp(600px, 80vw, 1000px);
+    margin: 0 auto 2rem; /* 2rem 只是示例，按你需要的间距调整 */
 }
 
 .locomoto-intro-desc {
@@ -482,10 +486,15 @@ button:focus {
   -ms-user-select: text !important;
 }
 
+
+
 /* Purple highlight (use your existing purple class) */
 .purple {
     color: var(--project-purple); /* or your hex code */
     font-style: normal; /* if you want italic, also add .italic */
+}
+.bold-link {
+    font-weight: bold;
 }
 
 /* White body text */
@@ -495,7 +504,9 @@ button:focus {
 .home-about-body {
     color: #FFFFFF;
     font-size: 1.2em !important;
-    text-align: left;
+    text-align: justify;
+    /* 可选：让最后一行左对齐，看起来更自然 */
+    text-align-last: left;
     margin-bottom: 0.5rem; /* 你可以根据需要调小或调大 */
     z-index: 10;
     pointer-events: auto;
@@ -692,15 +703,16 @@ div.locomoto-intro.left-align > p.home-about-body {
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    transition: height 0.5s ease;
+    max-height: 225px; /* 这里 300px 只是示例：根据你的 header + 2 张 GIF 的实际高度来定 */
+    transition: max-height 0.5s ease;
 }
 
     .gif-grid-container.collapsed {
-        height: 225px;
+        max-height: 225px;
     }
 
     .gif-grid-container.expanded {
-        height: auto;
+        max-height: 300vh;
     }
 
 .gif-grid.preview {
@@ -720,14 +732,14 @@ div.locomoto-intro.left-align > p.home-about-body {
     left: 0;
     width: 100%;
     height: 225px;
-    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
-    pointer-events: none;
+    background: linear-gradient(to top, rgba(120, 80, 181, 0.7) 0%, rgba(87, 199, 133, 0.1) 50%, rgba(255,255,255,0) 100%);
     display: flex;
     align-items: flex-end;
     justify-content: center;
 }
 
 .overlay-arrow {
+    display: inline-block;
     width: 16px;
     height: 16px;
     border-left: 4px solid white;

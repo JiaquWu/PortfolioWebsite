@@ -13,7 +13,7 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineCode,
 } from "react-icons/ai";
-
+import { IoTrainOutline } from 'react-icons/io5';
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
@@ -65,9 +65,7 @@ function NavBar() {
                 to="/Locomoto"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                /> Locomoto
+                              <IoTrainOutline style={{ marginBottom: "2px" }} /> Locomoto
               </Nav.Link>
             </Nav.Item>
 

@@ -992,10 +992,13 @@ div.locomoto-intro.left-align > p.home-about-body {
   box-shadow: none !important;
 }
 .project-heading {
-  color: white !important;
-  font-size: 2.3em !important;
-  font-weight: 500 !important;
-  padding-top: 10px !important;
+    color: white !important;
+    font-size: 2.3em !important;
+    font-weight: 500 !important;
+    padding-top: 10px !important;
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
 }
 
 /* --------- */

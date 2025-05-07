@@ -524,7 +524,7 @@ function Locomoto() {
                   </p>
 
                   <p className="home-about-body white-text">
-                      See below for specific examples of the gameplay systems I developed.
+                      Scroll down to explore some of the gameplay systems, features, and tools I helped bring to life.
                   </p>
               </div>
           <div className="steam-iframe-container">

@@ -29,10 +29,15 @@ function CodeSnippets() {
             <Particle />
         <Container>
         <h1 className="project-heading">
-          My <strong className="purple">Code Snippets </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Here are some code snippets that I would like to present.
+                    Fragments from My<strong className="purple"> Early Code </strong>
+                </h1>
+                <p style={{
+                    color: "white", fontStyle: "italic",
+                    zIndex: 10,
+                    position: "relative",
+                    pointerEvents: "auto" }}>
+                    Here are a few code snippets from older personal projects.
+                    <br></br>While I can't share professional work from Locomoto or Receiver 2, I hope these early examples offer a small glimpse into my coding journey.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "20px"}}>
         

@@ -15,7 +15,7 @@ import { FaLinkedinIn,FaItchIo } from "react-icons/fa";
 
 export default function Home2() {
     return (
-        <Container fluid className="home-about-section" id="about" style={{ paddingTop: "2rem" }}>
+        <Container fluid className="home-about-section" id="about" style={{ paddingTop: "0rem" }}>
             <Container>
                 <Row className="align-items-baseline">
                     <Col md={8} className="home-about-description">

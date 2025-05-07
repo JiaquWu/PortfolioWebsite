@@ -350,13 +350,13 @@ const locomotoGifs = [
 
 
 const groups = [
-  { key: "TrainControls", title: "Train Controls" },
-  { key: "Crafting", title: "Crafting" },
-  { key: "ResourceLoop", title: "Resource Loop" },
-  { key: "Feature-Specific Interaction", title: "Feature-Specific Interaction" },
-  { key: "ItemInteraction", title: "Item Interaction" },
-  { key: "GenericInteraction", title: "Generic Interaction" },
-    { key: "LegacyMechanics", title: "Legacy Mechanics" },
+    { key: "TrainControls", title: "Train Controls", description: "" },
+    { key: "Crafting", title: "Crafting", description: "" },
+    { key: "ResourceLoop", title: "Resource Loop", description: "" },
+    { key: "Feature-Specific Interaction", title: "Feature-Specific Interaction", description: "" },
+    { key: "ItemInteraction", title: "Item Interaction", description: "" },
+    { key: "GenericInteraction", title: "Generic Interaction", description: "" },
+    { key: "LegacyMechanics", title: "Legacy Mechanics", description: "" },
 ];
 
 
@@ -430,14 +430,55 @@ const heroGifs = [
 function HeroSection({ gifs, fadeDuration = 300}) {
     const [idx, setIdx] = useState(0);
     const [phase, setPhase] = useState("visible"); // "visible" | "fadingOut" | "fadingIn"
-    const imgRef = useRef();
+    /*const imgRef = useRef();*/
+    //const [srcUrl, setSrcUrl] = useState(gifs[0].src);
+    //let prevUrl = useRef(null);
 
-    // 预加载所有 GIF
-    useEffect(() => {
-        gifs.forEach((g) => new Image().src = g.src);
-    }, [gifs]);
-
-    // 启动播放／切换逻辑
+    const blobUrlsRef = useRef({ current: null, next: null });
+    const [loaded, setLoaded] = useState(false);
+     // 每次 idx 变化时，加载当前和下一张 GIF 的 Blob URL，并释放上一次
+         useEffect(() => {
+               let cancelled = false;
+               (async () => {
+                     // ---- 当前 GIF ----
+                         const { src: curSrc } = gifs[idx];
+                     const res1 = await fetch(curSrc);
+                     const blob1 = await res1.blob();
+                     if (cancelled) return;
+                     // 释放旧的 current URL
+                         if (blobUrlsRef.current.current) {
+                               URL.revokeObjectURL(blobUrlsRef.current.current);
+                             }
+                     const curUrl = URL.createObjectURL(blob1);
+                     blobUrlsRef.current.current = curUrl;
+                
+                         // ---- 下一张 GIF ----
+                         const nextIndex = (idx + 1) % gifs.length;
+                     const res2 = await fetch(gifs[nextIndex].src);
+                     const blob2 = await res2.blob();
+                     if (cancelled) return;
+                     // 释放旧的 next URL
+                         if (blobUrlsRef.current.next) {
+                              URL.revokeObjectURL(blobUrlsRef.current.next);
+                             }
+                     const nextUrl = URL.createObjectURL(blob2);
+                     blobUrlsRef.current.next = nextUrl;
+                
+                         setLoaded(true);
+                   })();
+               return () => {
+                     cancelled = true;
+                   };
+             }, [idx, gifs]);
+    
+         // 组件卸载时，统一释放 current 和 next
+         useEffect(() => {
+               return () => {
+                    const { current, next } = blobUrlsRef.current;
+                     if (current) URL.revokeObjectURL(current);
+                     if (next) URL.revokeObjectURL(next);
+                   };
+             }, []);
     useEffect(() => {
         let playTimer;
 
@@ -468,12 +509,23 @@ function HeroSection({ gifs, fadeDuration = 300}) {
 
     return (
         <div className="locomoto-hero">
-            <img
-                ref={imgRef}
-                src={gifs[idx].src}
-                alt=""
-                className={cls}
-            />
+            {loaded && (
+                <img
+                    src={blobUrlsRef.current.current}
+                    className={cls}
+                    alt=""
+                />
+            )}
+                      {/* 如果还没 loaded，可放个占位 */}
+                      {!loaded && <div className="hero-img placeholder" />}
+            {/* use blob-url instead of straight gif src */}
+                       {/*<img src={srcUrl} className={cls} alt="" />*/}
+            {/*<img*/}
+            {/*    ref={imgRef}*/}
+            {/*    src={gifs[idx].src}*/}
+            {/*    alt=""*/}
+            {/*    className={cls}*/}
+            {/*/>*/}
             <Container fluid className="locomoto-hero-content-wrapper">
                 {/* …在这里放文字、Steam iframe 等… */}
             </Container>
@@ -542,8 +594,8 @@ function Locomoto() {
         {groups.map((g) => (
           <section id={g.key} key={g.key} className="gif-section">
             <GifSection
-              title={g.title}
-              description={`这里是 ${g.title} 模块的演示`}
+                    title={g.title}
+                    description={g.description}
               gifs={locomotoGifs.filter((x) => x.group === g.key)}
             />
           </section>

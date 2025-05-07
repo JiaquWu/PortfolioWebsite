@@ -350,13 +350,13 @@ const locomotoGifs = [
 
 
 const groups = [
-  { key: "TrainControls", title: "Train Controls" },
-  { key: "Crafting", title: "Crafting" },
-  { key: "ResourceLoop", title: "Resource Loop" },
-  { key: "Feature-Specific Interaction", title: "Feature-Specific Interaction" },
-  { key: "ItemInteraction", title: "Item Interaction" },
-  { key: "GenericInteraction", title: "Generic Interaction" },
-    { key: "LegacyMechanics", title: "Legacy Mechanics" },
+    { key: "TrainControls", title: "Train Controls", description: "Train" },
+    { key: "Crafting", title: "Crafting", description: "Crafting" },
+    { key: "ResourceLoop", title: "Resource Loop", description: "Resource" },
+    { key: "Feature-Specific Interaction", title: "Feature-Specific Interaction", description: "Interaction" },
+    { key: "ItemInteraction", title: "Item Interaction", description: "ItemInteraction" },
+    { key: "GenericInteraction", title: "Generic Interaction", description: "GenericInteraction" },
+    { key: "LegacyMechanics", title: "Legacy Mechanics", description: "LegacyMechanics" },
 ];
 
 
@@ -542,8 +542,8 @@ function Locomoto() {
         {groups.map((g) => (
           <section id={g.key} key={g.key} className="gif-section">
             <GifSection
-              title={g.title}
-              description={`这里是 ${g.title} 模块的演示`}
+                    title={g.title}
+                    description={g.description}
               gifs={locomotoGifs.filter((x) => x.group === g.key)}
             />
           </section>

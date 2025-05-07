@@ -443,7 +443,37 @@ button:focus {
 .blockquote-footer {
   color: #a588c0 !important;
 }
+/* 段落字体：复用 Locomoto 页面 hero 下面的样式 */
+.locomoto-intro-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left; /* 左对齐 */
+    margin-bottom: 1rem;
+}
 
+/* 确保白色文字在背景上可读 */
+.white-text {
+    color: #ffffff;
+}
+
+/* 小节标题 */
+.section-heading {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: left; /* 左对齐 */
+    color: #ffffff;
+}
+
+/* 取消 .locomoto-intro-desc 在 Locomoto 页面的 max-width 限制——让它撑满这个 column */
+.home-about-description .locomoto-intro-desc {
+    max-width: none;
+}
+
+/* 头像上移 & 顶部对齐 */
+.myAvtar.align-self-start {
+     
+}
 
 /* --------- */
 /* Locomoto */

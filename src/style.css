@@ -475,6 +475,11 @@ button:focus {
      
 }
 
+.home-about-description .locomoto-intro-desc {
+    text-align: justify;
+    text-align-last: left;
+}
+
 /* --------- */
 /* Locomoto */
 /* --------- */

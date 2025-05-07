@@ -1,4 +1,5 @@
-﻿import React from "react";
+﻿/*eslint-disable unicode-bom */
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 // import myImg from "../../Assets/avatar.svg";
 //import avatar1 from "../../Assets/avatar1.jpg"

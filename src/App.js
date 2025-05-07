@@ -9,7 +9,7 @@ import Locomoto from "./components/Locomoto/Locomoto";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Route,
   Routes,
   Navigate

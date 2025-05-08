@@ -5,9 +5,11 @@
     "\\src",
     "\\src\\Assets",
     "\\src\\components",
+    "\\src\\components\\CodeSnippets",
     "\\src\\components\\Home",
-    "\\src\\components\\Locomoto"
+    "\\src\\components\\Locomoto",
+    "\\src\\components\\Projects"
   ],
-  "SelectedNode": "\\src\\components\\Home\\Home2.js",
+  "SelectedNode": "\\src\\components\\CodeSnippets\\CodeSnippets.js",
   "PreviewInSolutionExplorer": false
 }

@@ -14,7 +14,7 @@ import GifImage from "../GifImage";
 // import suicide from "../../Assets/Projects/suicide.png";
 // import bitsOfCode from "../../Assets/Projects/blog.png";
 //import LargeProjectCards from "./LargeProjectCards";
-
+//import { HashLink } from 'react-router-hash-link';
 //gifs
 
 //train controls
@@ -78,263 +78,231 @@ import FriendshipHeart from "../../Assets/LocomotoAssets/FriendshipHeart.gif";
 
 
 const locomotoGifs = [
+    // TrainControls
     {
         src: RoutePlanner, alt: "RoutePlanner", group: "TrainControls",
-        caption: "Player plans train routes through a node system."
+        caption: "Players lay out their train’s path by placing pins on the map."
     },
     {
         src: CoalWagon, alt: "CoalWagon", group: "TrainControls",
-        caption: "Player plans train routes through a node system."
+        caption: "Players get coals from the coal wagon"
     },
     {
         src: ShovelCoal, alt: "ShovelCoal", group: "TrainControls",
-        caption: "Player plans train routes through a node system."
+        caption: "Players shovel coal into the furnace to raise engine pressure."
     },
     {
         src: StartTrian, alt: "StartTrian", group: "TrainControls",
-        caption: "Player plans train routes through a node system."
+        caption: "Players engage the gearbox to get the train moving."
     },
     {
         src: PressureExplode, alt: "PressureExplode", group: "TrainControls",
-        caption: "Player plans train routes through a node system."
+        caption: "Overpressure can trigger a dramatic boiler explosion in the engine room."
     },
     {
         src: Whistle, alt: "Whistle", group: "TrainControls",
-        caption: "Player plans train routes through a node system."
+        caption: "Players blow the whistle to safely vent excess steam pressure."
     },
     {
         src: TrainFastSpeed, alt: "TrainFastSpeed", group: "TrainControls",
-        caption: "Player plans train routes through a node system."
+        caption: "Keeping the preesure in a certain zone for a while propels the train at thrilling top speeds."
     },
-    
-    //{
-    //    src: EnginePressureSettting, alt: "EnginePressureSettting", group: "TrainControls",
-    //    caption: "Player plans train routes through a node system."
-    //},
 
+    // Crafting
     {
         src: CraftingRecipes, alt: "CraftingRecipes", group: "Crafting",
-        caption: "Player plans train routes through a node system."
+        caption: "A numerous amount of cratable items for player to choose, each item has a unique crafting pattern"
     },
     {
         src: CraftingResoucePlacement, alt: "CraftingResoucePlacement", group: "Crafting",
-        caption: "Player plans train routes through a node system."
+        caption: "Players place resources freely on crafting table with the recipe as a reference"
     },
     {
         src: CraftingResult, alt: "CraftingResult", group: "Crafting",
-        caption: "Player plans train routes through a node system."
+        caption: "The newly crafted item appears once the recipe requirements are met."
     },
     {
         src: FancySeatCraftingPattern, alt: "FancySeatCraftingPattern", group: "Crafting",
-        caption: "Player plans train routes through a node system."
+        caption: "Players follow a special seat pattern to create decorative furniture."
     },
     {
         src: FancySeatIV, alt: "FancySeatIV", group: "Crafting",
-        caption: "Player plans train routes through a node system."
+        caption: "The finished fancy seat is added to inventory for later placement."
     },
-    //{
-    //    src: MirrorPattern1, alt: "MirrorPattern1", group: "Crafting",
-    //    caption: "Player plans train routes through a node system."
-    //},
-    //{
-    //    src: MirrorPattern2, alt: "MirrorPattern2", group: "Crafting",
-    //    caption: "Player plans train routes through a node system."
-    //},
-    
+
+    // ResourceLoop
     {
         src: PickupGarbage, alt: "PickupGarbage", group: "ResourceLoop",
-        caption: "Player plans train routes through a node system."
+        caption: "Players collect garbage tokens left behind by NPCs."
     },
     {
         src: GarbageToken, alt: "GarbageToken", group: "ResourceLoop",
-        caption: "Player plans train routes through a node system."
+        caption: "Garbage tokens represent resources that can be recycled or exchanged."
     },
     {
         src: NPCService, alt: "NPCService", group: "ResourceLoop",
-        caption: "Player plans train routes through a node system."
+        caption: "NPCs interact with service stations, generating token rewards."
     },
     {
         src: NPCLeaveToken, alt: "NPCLeaveToken", group: "ResourceLoop",
-        caption: "Player plans train routes through a node system."
+        caption: "After service, NPCs drop tokens players can pick up."
     },
-    
     {
         src: Delivery1, alt: "Delivery1", group: "ResourceLoop",
-        caption: "Player plans train routes through a node system."
+        caption: "Players load delivery crates onto the train for transport."
     },
     {
         src: Delivery2, alt: "Delivery2", group: "ResourceLoop",
-        caption: "Player plans train routes through a node system."
+        caption: "Delivered crates are unpacked at the destination station."
     },
-    
-    //{
-    //    src: NPCHungerSetting, alt: "NPCHungerSetting", group: "ResourceLoop",
-    //    caption: "Player plans train routes through a node system."
-    //},
     {
         src: TokenExchange, alt: "TokenExchange", group: "ResourceLoop",
-        caption: "Player plans train routes through a node system."
+        caption: "Players trade collected tokens at kiosks for crafting materials."
     },
     {
         src: BreakInteraction, alt: "BreakInteraction", group: "ResourceLoop",
-        caption: "Player plans train routes through a node system."
+        caption: "Players break crates and barrels to discover hidden items."
     },
-    
 
+    // ItemInteraction
     {
         src: HotCocoaMachine, alt: "HotCocoaMachine", group: "ItemInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players brew hot cocoa to serve warming drinks to NPCs."
     },
-
-
     {
         src: Pinwheel, alt: "Pinwheel", group: "ItemInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players spin the pinwheel for whimsical animation feedback."
     },
-
     {
         src: Seat, alt: "Seat", group: "ItemInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players pick up and place seats to create resting areas."
     },
-
     {
         src: TwoGarbageBags, alt: "TwoGarbageBags", group: "ItemInteraction",
-        caption: "TwoGarbageBags."
+        caption: "Players handle two garbage bags at once for efficient cleanup."
     },
     {
         src: Shelf, alt: "Shelf", group: "ItemInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players store items on shelves for organized inventory."
     },
-
     {
         src: ToolStorage, alt: "ToolStorage", group: "ItemInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players open tool chests to access workshop tools."
     },
     {
         src: TableFold, alt: "TableFold", group: "ItemInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players fold and unfold tables to change workshop layouts."
     },
     {
         src: WallpaperPaintStorage, alt: "WallpaperPaintStorage", group: "ItemInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players choose wallpaper and paint to decorate rooms."
     },
 
+    // Feature-Specific Interaction
     {
         src: TrainPaint, alt: "TrainPaint", group: "Feature-Specific Interaction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players apply custom paint schemes to personalize the train."
     },
-    
     {
         src: TrainWallpaper, alt: "TrainWallpaper", group: "Feature-Specific Interaction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players wallpaper the train’s interior with selectable patterns."
     },
     {
         src: Fishing, alt: "Fishing", group: "Feature-Specific Interaction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players cast lines into water bodies to catch fish."
     },
     {
         src: Seed, alt: "Seed", group: "Feature-Specific Interaction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players plant seeds in plots and watch crops grow."
     },
     {
         src: DeliveryBox, alt: "DeliveryBox", group: "Feature-Specific Interaction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players seal and label delivery boxes for shipment."
     },
     {
         src: CommunityBoard, alt: "CommunityBoard", group: "Feature-Specific Interaction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players post and read messages on the community noticeboard."
     },
     {
         src: Wave, alt: "Wave", group: "Feature-Specific Interaction",
-        caption: "Wave."
+        caption: "Players wave to NPCs to trigger friendly animations."
     },
-    
 
+    // GenericInteraction
     {
         src: Chop, alt: "Chop", group: "GenericInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players chop trees with an axe to gather wood."
     },
-
     {
         src: Mine, alt: "Mine", group: "GenericInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players mine ore from rocks with a pickaxe."
     },
     {
         src: MapStamp, alt: "MapStamp", group: "GenericInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players stamp the map to mark explored locations."
     },
-
     {
         src: TreasureBox, alt: "TreasureBox", group: "GenericInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players open treasure boxes to uncover rare loot."
     },
     {
         src: Shovel, alt: "Shovel", group: "GenericInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players dig soil with a shovel to uncover buried items."
     },
-
     {
         src: ShakeTree, alt: "ShakeTree", group: "GenericInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players shake trees to make fruits or items fall."
     },
-
     {
         src: ToiletDoor, alt: "ToiletDoor", group: "GenericInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players open toilet doors to let NPCs use facilities."
     },
     {
         src: HouseSign, alt: "HouseSign", group: "GenericInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players change house signs to rename buildings."
     },
     {
         src: Combine, alt: "Combine", group: "GenericInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players combine items in the UI to create new tools."
     },
-    
     {
         src: Fume, alt: "Fume", group: "GenericInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players activate fume emitters for environmental effects."
     },
-    
-    
-    
     {
         src: Repair, alt: "Repair", group: "GenericInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players repair broken objects using specialized tools."
     },
-    
-    
-    
     {
         src: GenericInteraction, alt: "GenericInteraction", group: "GenericInteraction",
-        caption: "Player plans train routes through a node system."
+        caption: "Players interact with various objects via a unified system."
     },
 
+    // LegacyMechanics
     {
         src: OldShovel, alt: "OldShovel", group: "LegacyMechanics",
-        caption: "Player plans train routes through a node system."
+        caption: "Prototype shovel mechanic used for early digging tests."
     },
     {
         src: OldGearbox, alt: "OldGearbox", group: "LegacyMechanics",
-        caption: "Player plans train routes through a node system."
+        caption: "Initial gearbox interaction for basic forward/reverse control."
     },
     {
         src: OldShelf, alt: "OldShelf", group: "LegacyMechanics",
-        caption: "Player plans train routes through a node system."
+        caption: "Early storage system for shelving items in prototypes."
     },
     {
         src: OldCraft, alt: "OldCraft", group: "LegacyMechanics",
-        caption: "Player plans train routes through a node system."
+        caption: "Prototype crafting UI for mixing resources in early builds."
     },
     {
         src: OldDorian, alt: "OldDorian", group: "LegacyMechanics",
-        caption: "Player plans train routes through a node system."
+        caption: "Legacy character model used to test early animations."
     },
-    
     {
         src: FriendshipHeart, alt: "FriendshipHeart", group: "LegacyMechanics",
-        caption: "Player plans train routes through a node system."
-    }
+        caption: "Prototype collectible heart for testing social mechanics."
+    },
 ];
 
 
@@ -350,7 +318,10 @@ const locomotoGifs = [
 
 
 const groups = [
-    { key: "TrainControls", title: "Train Controls", description: "Train" },
+    {
+        key: "TrainControls", title: "Train Controls",
+        description: "Train"
+    },
     { key: "Crafting", title: "Crafting", description: "Crafting" },
     { key: "ResourceLoop", title: "Resource Loop", description: "Resource" },
     { key: "Feature-Specific Interaction", title: "Feature-Specific Interaction", description: "Interaction" },
@@ -491,14 +462,25 @@ function Locomoto() {
       
       
       
-      {/* 侧边导航栏 */}
-      <nav className="side-nav">
-        {groups.map((g) => (
-          <a key={g.key} href={`#${g.key}`} className="nav-link">
-            {g.title}
-          </a>
-        ))}
-      </nav>
+          {/* 侧边导航栏 */}
+          <nav className="side-nav">
+              {groups.map((g) => (
+                  <a
+                      key={g.key}
+                      href={`#${g.key}`}
+                      className="nav-link"
+                      onClick={(e) => {
+                          e.preventDefault();
+                          const el = document.getElementById(g.key);
+                          if (el) {
+                              el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          }
+                      }}
+                  >
+                      {g.title}
+                  </a>
+              ))}
+          </nav>
 
       {/* 主体内容 */}
       

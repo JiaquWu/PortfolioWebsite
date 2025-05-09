@@ -328,7 +328,9 @@ const groups = [
                     <br></br>
                     Main features:
                     <br></br>
-                    Utilized AI navigation, Timeline and other plugins and components, collaborate closely with designers and animator for creating and refining smooth and satisfying interaction in shoveling, using gearbox and whistling.
+                    Built an extendable pressure, speed, and train control system, ensuring stability and flexibility so I could rapidly implement subsequent changes.
+                    <br></br>
+                    Utilized AI navigation, Timeline, and other Unity plugins and components, collaborate closely with designers and animator for creating and refining smooth and satisfying interaction in all train control related interactions.
 
                 </div>
             )

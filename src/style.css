@@ -730,6 +730,7 @@ div.locomoto-intro.left-align > p.home-about-body {
 .gif-card-description {
     color: #fff;
     font-size: 0.95rem;
+    text-align: left;
 }
 
 .gif-grid-container {

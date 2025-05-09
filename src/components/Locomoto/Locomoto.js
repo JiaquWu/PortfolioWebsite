@@ -81,7 +81,7 @@ const locomotoGifs = [
     // TrainControls
     {
         src: RoutePlanner, alt: "RoutePlanner", group: "TrainControls",
-        caption: "Players lay out their train’s path by placing pins on the map."
+        caption: "Players lay out their train’s route by placing pins on the map."
     },
     {
         src: CoalWagon, alt: "CoalWagon", group: "TrainControls",
@@ -97,7 +97,7 @@ const locomotoGifs = [
     },
     {
         src: PressureExplode, alt: "PressureExplode", group: "TrainControls",
-        caption: "Overpressure can trigger a dramatic boiler explosion in the engine room."
+        caption: "Overpressure can trigger a dramatic furnace explosion in the engine room."
     },
     {
         src: Whistle, alt: "Whistle", group: "TrainControls",
@@ -119,109 +119,109 @@ const locomotoGifs = [
     },
     {
         src: CraftingResult, alt: "CraftingResult", group: "Crafting",
-        caption: "The newly crafted item appears once the recipe requirements are met."
+        caption: "The newly crafted item appears once the recipe requirements are met, also the color of each part of the item is based on the resource used"
     },
     {
         src: FancySeatCraftingPattern, alt: "FancySeatCraftingPattern", group: "Crafting",
-        caption: "Players follow a special seat pattern to create decorative furniture."
+        caption: "A custom editor for designers to create crafting patterns, this one is for fancy seat in gifs above"
     },
     {
         src: FancySeatIV, alt: "FancySeatIV", group: "Crafting",
-        caption: "The finished fancy seat is added to inventory for later placement."
+        caption: "Some editor tools for designers and artists to easily set up the customiziable parts on the item"
     },
 
     // ResourceLoop
     {
         src: PickupGarbage, alt: "PickupGarbage", group: "ResourceLoop",
-        caption: "Players collect garbage tokens left behind by NPCs."
+        caption: "Players collect garbages placed in the world and left by NPCs"
     },
     {
         src: GarbageToken, alt: "GarbageToken", group: "ResourceLoop",
-        caption: "Garbage tokens represent resources that can be recycled or exchanged."
+        caption: "Player get tokens from recycling garbages"
     },
     {
         src: NPCService, alt: "NPCService", group: "ResourceLoop",
-        caption: "NPCs interact with service stations, generating token rewards."
+        caption: "Player get token from serving NPCs with snacks while they travelling"
     },
     {
         src: NPCLeaveToken, alt: "NPCLeaveToken", group: "ResourceLoop",
-        caption: "After service, NPCs drop tokens players can pick up."
+        caption: "After arriving at their destinations, NPCs drop tokens that players can pick up."
     },
     {
         src: Delivery1, alt: "Delivery1", group: "ResourceLoop",
-        caption: "Players load delivery crates onto the train for transport."
+        caption: "Delivery parcels to random destinations spawn randomly for player to collect."
     },
     {
         src: Delivery2, alt: "Delivery2", group: "ResourceLoop",
-        caption: "Delivered crates are unpacked at the destination station."
+        caption: "Player get token from delivering parcels to their target destinations"
     },
     {
         src: TokenExchange, alt: "TokenExchange", group: "ResourceLoop",
-        caption: "Players trade collected tokens at kiosks for crafting materials."
+        caption: "Players exchange tokens for different resources at different token machines"
     },
     {
         src: BreakInteraction, alt: "BreakInteraction", group: "ResourceLoop",
-        caption: "Players break crates and barrels to discover hidden items."
+        caption: "Players get all resources used for crafting after breaking the furniture"
     },
 
     // ItemInteraction
     {
         src: HotCocoaMachine, alt: "HotCocoaMachine", group: "ItemInteraction",
-        caption: "Players brew hot cocoa to serve warming drinks to NPCs."
+        caption: "Players get service items to serve NPCs or enjoy it themselves"
     },
     {
         src: Pinwheel, alt: "Pinwheel", group: "ItemInteraction",
-        caption: "Players spin the pinwheel for whimsical animation feedback."
+        caption: "Players spin the pinwheels."
     },
     {
         src: Seat, alt: "Seat", group: "ItemInteraction",
-        caption: "Players pick up and place seats to create resting areas."
+        caption: "Players and NPC sit on the seat"
     },
     {
         src: TwoGarbageBags, alt: "TwoGarbageBags", group: "ItemInteraction",
-        caption: "Players handle two garbage bags at once for efficient cleanup."
+        caption: "Players interact with garbage bags in different ways"
     },
     {
         src: Shelf, alt: "Shelf", group: "ItemInteraction",
-        caption: "Players store items on shelves for organized inventory."
+        caption: "Players store items on shelves with intuitive and easy controls"
     },
     {
         src: ToolStorage, alt: "ToolStorage", group: "ItemInteraction",
-        caption: "Players open tool chests to access workshop tools."
+        caption: "Players use tool storage to access tools owned by them."
     },
     {
         src: TableFold, alt: "TableFold", group: "ItemInteraction",
-        caption: "Players fold and unfold tables to change workshop layouts."
+        caption: "Players fold and unfold tables."
     },
     {
         src: WallpaperPaintStorage, alt: "WallpaperPaintStorage", group: "ItemInteraction",
-        caption: "Players choose wallpaper and paint to decorate rooms."
+        caption: "Players use wallpaper and paint storage to easily access wallpaper and paint buckets"
     },
 
     // Feature-Specific Interaction
     {
         src: TrainPaint, alt: "TrainPaint", group: "Feature-Specific Interaction",
-        caption: "Players apply custom paint schemes to personalize the train."
+        caption: "Players apply new paint schemes to personalize the outside train."
     },
     {
         src: TrainWallpaper, alt: "TrainWallpaper", group: "Feature-Specific Interaction",
-        caption: "Players wallpaper the train’s interior with selectable patterns."
+        caption: "Players decorate the train’s interior with new wallpapers."
     },
     {
         src: Fishing, alt: "Fishing", group: "Feature-Specific Interaction",
-        caption: "Players cast lines into water bodies to catch fish."
+        caption: "Players play fishing mini-game and get fish and other items from the water"
     },
     {
         src: Seed, alt: "Seed", group: "Feature-Specific Interaction",
-        caption: "Players plant seeds in plots and watch crops grow."
+        caption: "Players plant seeds in slots and collect flowers"
     },
     {
         src: DeliveryBox, alt: "DeliveryBox", group: "Feature-Specific Interaction",
-        caption: "Players seal and label delivery boxes for shipment."
+        caption: "Players deliver required items into delivery box to progress quest"
     },
     {
         src: CommunityBoard, alt: "CommunityBoard", group: "Feature-Specific Interaction",
-        caption: "Players post and read messages on the community noticeboard."
+        caption: "Players can get new quests on the community board when progressing the game."
     },
     {
         src: Wave, alt: "Wave", group: "Feature-Specific Interaction",
@@ -239,11 +239,11 @@ const locomotoGifs = [
     },
     {
         src: MapStamp, alt: "MapStamp", group: "GenericInteraction",
-        caption: "Players stamp the map to mark explored locations."
+        caption: "Players use the map stamper to unlock new stations on the map"
     },
     {
         src: TreasureBox, alt: "TreasureBox", group: "GenericInteraction",
-        caption: "Players open treasure boxes to uncover rare loot."
+        caption: "Players open treasure boxes with keys found in the station to uncover rare loot."
     },
     {
         src: Shovel, alt: "Shovel", group: "GenericInteraction",
@@ -255,19 +255,19 @@ const locomotoGifs = [
     },
     {
         src: ToiletDoor, alt: "ToiletDoor", group: "GenericInteraction",
-        caption: "Players open toilet doors to let NPCs use facilities."
+        caption: "Players open and close toilet doors."
     },
     {
         src: HouseSign, alt: "HouseSign", group: "GenericInteraction",
-        caption: "Players change house signs to rename buildings."
+        caption: "Players read house sign to know more information about it."
     },
     {
         src: Combine, alt: "Combine", group: "GenericInteraction",
-        caption: "Players combine items in the UI to create new tools."
+        caption: "Players combine items to solve little puzzle made for the quest"
     },
     {
         src: Fume, alt: "Fume", group: "GenericInteraction",
-        caption: "Players activate fume emitters for environmental effects."
+        caption: "Players collect air sample with the jar."
     },
     {
         src: Repair, alt: "Repair", group: "GenericInteraction",
@@ -275,33 +275,33 @@ const locomotoGifs = [
     },
     {
         src: GenericInteraction, alt: "GenericInteraction", group: "GenericInteraction",
-        caption: "Players interact with various objects via a unified system."
+        caption: "A glimpse of what generic interaction looks like in editor, this one is made for mining interactions"
     },
 
     // LegacyMechanics
     {
         src: OldShovel, alt: "OldShovel", group: "LegacyMechanics",
-        caption: "Prototype shovel mechanic used for early digging tests."
+        caption: "A shovel mini-game in furnace interaction, throwing coal with multipliers and good timing gain more pressure!"
     },
     {
         src: OldGearbox, alt: "OldGearbox", group: "LegacyMechanics",
-        caption: "Initial gearbox interaction for basic forward/reverse control."
+        caption: "Initial gearbox interaction with more train controls"
     },
     {
         src: OldShelf, alt: "OldShelf", group: "LegacyMechanics",
-        caption: "Early storage system for shelving items in prototypes."
+        caption: "Early shelf interaction for storing items."
     },
     {
         src: OldCraft, alt: "OldCraft", group: "LegacyMechanics",
-        caption: "Prototype crafting UI for mixing resources in early builds."
+        caption: "The first iteration of crafting interaction."
     },
     {
         src: OldDorian, alt: "OldDorian", group: "LegacyMechanics",
-        caption: "Legacy character model used to test early animations."
+        caption: "Unfinished trading interaction with certain NPCs in early development"
     },
     {
         src: FriendshipHeart, alt: "FriendshipHeart", group: "LegacyMechanics",
-        caption: "Prototype collectible heart for testing social mechanics."
+        caption: "Heart particles when NPC gain more friendship points, one of the first things I made in the game"
     },
 ];
 
@@ -320,7 +320,18 @@ const locomotoGifs = [
 const groups = [
     {
         key: "TrainControls", title: "Train Controls",
-        description: "Train"
+        description:
+            (
+                <div className="gif-card-description" >
+                    Train is a core part of Locomoto, players can drive it around the world as they want.
+                    Train control system is one of the first feature I've made in the game while it's been through a plenty of iterations.
+                    <br></br>
+                    Main features:
+                    <br></br>
+                    Utilized AI navigation, Timeline and other plugins and components, collaborate closely with designers and animator for creating and refining smooth and satisfying interaction in shoveling, using gearbox and whistling.
+
+                </div>
+            )
     },
     { key: "Crafting", title: "Crafting", description: "Crafting" },
     { key: "ResourceLoop", title: "Resource Loop", description: "Resource" },

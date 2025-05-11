@@ -323,24 +323,131 @@ const groups = [
         description:
             (
                 <div className="gif-card-description" >
-                    Train is a core part of Locomoto, players can drive it around the world as they want.
-                    Train control system is one of the first feature I've made in the game while it's been through a plenty of iterations.
-                    <br></br>
-                    Main features:
-                    <br></br>
-                    Built an extendable pressure, speed, and train control system, ensuring stability and flexibility so I could rapidly implement subsequent changes.
-                    <br></br>
-                    Utilized AI navigation, Timeline, and other Unity plugins and components, collaborate closely with designers and animator for creating and refining smooth and satisfying interaction in all train control related interactions.
-
+                    <p>Train is a core part of Locomoto, players can drive it around the world as they want.
+                    The train control system was the first gameplay module I took on after joining the team—while the basic framework was already in place, I implemented and refined every new feature through multiple iterations to deliver a cozy, polished driving experience.
+ </p>                
+                      <p><strong>Main Features & My Contributions:</strong></p>
+                    <ul>
+                    <li>Built an extendable pressure, speed, and train control system that underpins multiple gameplay interactions including furnace interaction, gearbox interaction, whilstle interaction, coal interaction, etc. Ensuring stability and flexibility so I could rapidly implement subsequent changes.
+                    </li>
+                    <li>Utilized AI navigation, Timeline, and other Unity plugins and components, collaborate closely with designers and animator for creating and refining smooth and satisfying interaction in all train control related interactions.
+</li></ul>
                 </div>
             )
     },
-    { key: "Crafting", title: "Crafting", description: "Crafting" },
-    { key: "ResourceLoop", title: "Resource Loop", description: "Resource" },
-    { key: "Feature-Specific Interaction", title: "Feature-Specific Interaction", description: "Interaction" },
-    { key: "ItemInteraction", title: "Item Interaction", description: "ItemInteraction" },
-    { key: "GenericInteraction", title: "Generic Interaction", description: "GenericInteraction" },
-    { key: "LegacyMechanics", title: "Legacy Mechanics", description: "LegacyMechanics" },
+    { key: "Crafting", title: "Crafting", 
+        description:
+            (
+                <div className="gif-card-description" >
+                    <p>Crafting in Locomoto is the main way for players to get furniture, which are an essential part of customization in the game.
+                    We had at least three different ways of crafting at different stage of development, while we finally chose to go with this Minecraft-like crafting after I made a prototype of it. </p>
+                      <p><strong>Main Features & My Contributions:</strong></p>
+                     <ul>
+                        <li>Created Minecraft-like pattern-based crafting system with highly customizable items. Each furniture and craftble items in Locomoto have an unique crafting pattern,
+                    and different parts in a furniture can have different colors depending on which resources player used in crafting. 
+                    </li>
+
+                    <li>Implemented unity editor tools for designers and artists to easily create patterns and deicde which parts of furniture can be customizable with which type of resource.
+                    </li>
+                    <li>Utilized bitwise operations in crafting system, which improved computational efficiency and reduced performance cost.
+                    </li>
+                    <li>Collaborated closely with UI programmer and designers to ensure the smoothness and enjoyment in crafting interaction.
+                    </li> </ul>
+
+                </div>
+            )
+     },
+    { key: "ResourceLoop", title: "Resource Loop", 
+        description:
+            (
+                <div className="gif-card-description" >
+                    <p>Resource loop is a core gameplay loop in Locomoto. There are a lot of ways for players to get resources, but apart from finding preplaced resources in stations and
+                        getting them from NPC quests, the repetitive way is to drive NPC to their destinations and serve them during travelling, recycle garbage left by NPCs, and delivery parcels.
+ </p>                
+                      <p><strong>Main Features & My Contributions:</strong></p>
+                    <ul>
+                    <li>
+                         Implemented recycling, NPC-seat interactions, delivery-station workflows, NPC preference handling, resource exchanges, and breaking interactions
+                         — building on our existing NPC state machine, dialogue, station, item, and save systems, and iterating each feature for seamless, stable integration.
+                    </li>
+                    {/* <li></li> */}
+</ul>
+                </div>
+            )
+    },
+    { key: "Feature-Specific Interaction", title: "Feature-Specific Interaction", 
+        description:
+            (
+                <div className="gif-card-description" >
+                    <p>
+                        These interactions in Locomoto are self-contained gameplay mechanics, each with its own rules and logic. While they first appeared to serve particular quest requirements, over time they were refined into fully-fledged features in their own right.
+ </p>                
+                      <p><strong>Main Features & My Contributions:</strong></p>
+                    <ul>
+                    <li>
+                         Prototyped gameplay features rapidly—train customization, fishing, planting, item delivery, quest-board mechanics, and NPC interactions—to meet quest needs, then developed each into a complete, standalone gameplay mechanic
+                    </li>
+                    <li>
+                        Built flexible Unity editor tools so designers and artists could configure every detail without code, such as defining delivery point conditions, mapping paint bucket colors and materials to wagon parts, specifying fish to certain lakes, setting lavender seed growth timers and vase rewards, and more.
+                    </li>
+</ul>
+                </div>
+            )
+     },
+    { key: "ItemInteraction", title: "Item Interaction", 
+        description:
+            (
+                <div className="gif-card-description" >
+                    <p>
+                        Locomoto features a wide variety of interactive items, each with its own special function. Below are a few examples that I implemented.
+ </p>                
+                      <p><strong>Main Features & My Contributions:</strong></p>
+                    <ul>
+                    <li>
+                         Implemented a wide range of interactive items to meet specific gameplay needs—seats that support both player and NPC seating; foldable tables; machines dispensing various items; consumable foods and beverages; garbage bags with multiple ways to store and retrieve garbage ; dedicated tool, paint-bucket, and wallpaper storage containers; and spin-up pinwheels.
+                    </li>
+                    <li>
+                        Engaged with other developers to refine every detail—iterating intensively (for example, finalizing the seating interaction to everyone's satisfaction just one week before launch) so that each item interaction feels intuitive, comfortable, and cohesive in the final game.
+                    </li>
+                    <li>
+                        Abstracted common interaction behaviors into reusable modules, to improve code quality and reducing workload. For example, all circular menu interactions leverage the same underlying functions.
+                    </li>
+</ul>
+                </div>
+            )
+     },
+    { key: "GenericInteraction", title: "Generic Interaction", 
+        description:
+            (
+                <div className="gif-card-description" >
+                    <p>
+                        Locomoto includes a variety of fun, diverse interactions that don't each need their own system: everything from chopping and mining to map-stamping and chest-opening, as shown in the GIFs below, is powered by our single generic-interaction framework.
+ </p>                
+                      <p><strong>Main Features & My Contributions:</strong></p>
+                    <ul>
+                    <li>
+                         Developed and continuously refined the generic interaction system into a highly extensible framework, supporting behaviors from chopping and mining to door toggles and tree-shakes that drop items.
+                    </li>
+                    <li>
+                        Built editor tools that let designers easily implement gameplay features—setting quest states, triggering dialogue, granting rewards, spawning items, and playing feedback effects, while also configuring interaction activation conditions, animation durations, respawn timers, and more. This empowers them to create a wide variety of in-game interactions without writing a single line of code.
+                    </li>
+                    
+</ul>
+                </div>
+            )
+     },
+    { key: "LegacyMechanics", title: "Legacy Mechanics", 
+        description:
+            (
+                <div className="gif-card-description" >
+                    <p>
+                        Throughout the development of Locomoto we experimented with and refined many gameplay systems—several of my early prototypes didn't make the final cut. Here's a glimpse at some of the mechanics we ultimately set aside.
+ </p>                
+                     
+            
+                </div>
+            )
+     },
 ];
 
 
@@ -511,7 +618,7 @@ function Locomoto() {
                       is a cozy life-simulation adventure game,
                       which launched on 
                       <a href="https://store.steampowered.com/app/2328650/Locomoto/" className="purple bold-link"> Steam </a> 
-                      in April 2025 and will release on  <a href="https://eu.store.thqnordic.com/en/Locomoto-NSW/9120131602940" className="purple bold-link">Nintendo Switch</a> in upcoming 2025. As the <b className="purple">Gameplay Programmer</b>, I was responsible for implementing and refining most of the core gameplay mechanics and systems—including train controls, NPC passenger interactions, resource loops, crafting systems, and various customizable interactive items and features. Throughout the project, I worked closely and proactively with designers and artists, rapidly prototyping features, building specialized tools to streamline our development process, and iteratively polishing gameplay elements to deliver a relaxing and engaging player experience.
+                      in April 2025 and will release on  <a href="https://eu.store.thqnordic.com/en/Locomoto-NSW/9120131602940" className="purple bold-link">Nintendo Switch</a> in upcoming 2025. As the <b className="purple">Gameplay Programmer</b>, I was responsible for implementing and refining most of the core gameplay mechanics and systems—including train controls, NPC passenger interactions, resource loops, crafting systems, and various customizable interactive items and features in Unity and C#. Throughout the project, I worked closely and proactively with designers and artists, rapidly prototyping features, building specialized tools to streamline our development process, and iteratively polishing gameplay elements to deliver a relaxing and engaging player experience.
                   </p>
 
                   <p className="home-about-body white-text">

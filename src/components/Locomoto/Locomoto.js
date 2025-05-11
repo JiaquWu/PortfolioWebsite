@@ -85,7 +85,7 @@ const locomotoGifs = [
     },
     {
         src: CoalWagon, alt: "CoalWagon", group: "TrainControls",
-        caption: "Players get coals from the coal wagon"
+        caption: "Players get coals from the coal wagon."
     },
     {
         src: ShovelCoal, alt: "ShovelCoal", group: "TrainControls",
@@ -111,37 +111,37 @@ const locomotoGifs = [
     // Crafting
     {
         src: CraftingRecipes, alt: "CraftingRecipes", group: "Crafting",
-        caption: "A numerous amount of cratable items for player to choose, each item has a unique crafting pattern"
+        caption: "A numerous amount of cratable items for player to choose, each item has a unique crafting pattern."
     },
     {
         src: CraftingResoucePlacement, alt: "CraftingResoucePlacement", group: "Crafting",
-        caption: "Players place resources freely on crafting table with the recipe as a reference"
+        caption: "Players place resources freely on crafting table with the recipe as a reference."
     },
     {
         src: CraftingResult, alt: "CraftingResult", group: "Crafting",
-        caption: "The newly crafted item appears once the recipe requirements are met, also the color of each part of the item is based on the resource used"
+        caption: "The newly crafted item appears once the recipe requirements are met, also the color of each part of the item is based on the resource used."
     },
     {
         src: FancySeatCraftingPattern, alt: "FancySeatCraftingPattern", group: "Crafting",
-        caption: "A custom editor for designers to create crafting patterns, this one is for fancy seat in gifs above"
+        caption: "A custom editor for designers to create crafting patterns, this one is for fancy seat in gifs above."
     },
     {
         src: FancySeatIV, alt: "FancySeatIV", group: "Crafting",
-        caption: "Some editor tools for designers and artists to easily set up the customiziable parts on the item"
+        caption: "Some editor tools for designers and artists to easily set up the customiziable parts on the item."
     },
 
     // ResourceLoop
     {
         src: PickupGarbage, alt: "PickupGarbage", group: "ResourceLoop",
-        caption: "Players collect garbages placed in the world and left by NPCs"
+        caption: "Players collect garbages placed in the world and left by NPCs."
     },
     {
         src: GarbageToken, alt: "GarbageToken", group: "ResourceLoop",
-        caption: "Player get tokens from recycling garbages"
+        caption: "Player get tokens from recycling garbages."
     },
     {
         src: NPCService, alt: "NPCService", group: "ResourceLoop",
-        caption: "Player get token from serving NPCs with snacks while they travelling"
+        caption: "Player get token from serving NPCs with snacks while they travelling."
     },
     {
         src: NPCLeaveToken, alt: "NPCLeaveToken", group: "ResourceLoop",
@@ -153,37 +153,37 @@ const locomotoGifs = [
     },
     {
         src: Delivery2, alt: "Delivery2", group: "ResourceLoop",
-        caption: "Player get token from delivering parcels to their target destinations"
+        caption: "Player get token from delivering parcels to their target destinations."
     },
     {
         src: TokenExchange, alt: "TokenExchange", group: "ResourceLoop",
-        caption: "Players exchange tokens for different resources at different token machines"
+        caption: "Players exchange tokens for different resources at different token machines."
     },
     {
         src: BreakInteraction, alt: "BreakInteraction", group: "ResourceLoop",
-        caption: "Players get all resources used for crafting after breaking the furniture"
+        caption: "Players get all resources used for crafting after breaking the furniture."
     },
 
     // ItemInteraction
     {
         src: HotCocoaMachine, alt: "HotCocoaMachine", group: "ItemInteraction",
-        caption: "Players get service items to serve NPCs or enjoy it themselves"
+        caption: "Players get service items to serve NPCs or enjoy it themselves."
     },
     {
-        src: Pinwheel, alt: "Pinwheel", group: "ItemInteraction",
+        src: Pinwheel, alt: "Pinwheel", group: "ItemInteraction.",
         caption: "Players spin the pinwheels."
     },
     {
         src: Seat, alt: "Seat", group: "ItemInteraction",
-        caption: "Players and NPC sit on the seat"
+        caption: "Players and NPC sit on the seat."
     },
     {
         src: TwoGarbageBags, alt: "TwoGarbageBags", group: "ItemInteraction",
-        caption: "Players interact with garbage bags in different ways"
+        caption: "Players interact with garbage bags in different ways."
     },
     {
         src: Shelf, alt: "Shelf", group: "ItemInteraction",
-        caption: "Players store items on shelves with intuitive and easy controls"
+        caption: "Players store items on shelves with intuitive and easy controls."
     },
     {
         src: ToolStorage, alt: "ToolStorage", group: "ItemInteraction",
@@ -195,7 +195,7 @@ const locomotoGifs = [
     },
     {
         src: WallpaperPaintStorage, alt: "WallpaperPaintStorage", group: "ItemInteraction",
-        caption: "Players use wallpaper and paint storage to easily access wallpaper and paint buckets"
+        caption: "Players use wallpaper and paint storage to easily access wallpaper and paint buckets."
     },
 
     // Feature-Specific Interaction
@@ -209,15 +209,15 @@ const locomotoGifs = [
     },
     {
         src: Fishing, alt: "Fishing", group: "Feature-Specific Interaction",
-        caption: "Players play fishing mini-game and get fish and other items from the water"
+        caption: "Players play fishing mini-game and get fish and other items from the water."
     },
     {
         src: Seed, alt: "Seed", group: "Feature-Specific Interaction",
-        caption: "Players plant seeds in slots and collect flowers"
+        caption: "Players plant seeds in slots and collect flowers."
     },
     {
         src: DeliveryBox, alt: "DeliveryBox", group: "Feature-Specific Interaction",
-        caption: "Players deliver required items into delivery box to progress quest"
+        caption: "Players deliver required items into delivery box to progress quest."
     },
     {
         src: CommunityBoard, alt: "CommunityBoard", group: "Feature-Specific Interaction",
@@ -239,7 +239,7 @@ const locomotoGifs = [
     },
     {
         src: MapStamp, alt: "MapStamp", group: "GenericInteraction",
-        caption: "Players use the map stamper to unlock new stations on the map"
+        caption: "Players use the map stamper to unlock new stations on the map."
     },
     {
         src: TreasureBox, alt: "TreasureBox", group: "GenericInteraction",
@@ -263,7 +263,7 @@ const locomotoGifs = [
     },
     {
         src: Combine, alt: "Combine", group: "GenericInteraction",
-        caption: "Players combine items to solve little puzzle made for the quest"
+        caption: "Players combine items to solve little puzzle made for the quest."
     },
     {
         src: Fume, alt: "Fume", group: "GenericInteraction",
@@ -275,7 +275,7 @@ const locomotoGifs = [
     },
     {
         src: GenericInteraction, alt: "GenericInteraction", group: "GenericInteraction",
-        caption: "A glimpse of what generic interaction looks like in editor, this one is made for mining interactions"
+        caption: "A glimpse of what generic interaction looks like in editor, this one is made for mining interactions."
     },
 
     // LegacyMechanics
@@ -285,7 +285,7 @@ const locomotoGifs = [
     },
     {
         src: OldGearbox, alt: "OldGearbox", group: "LegacyMechanics",
-        caption: "Initial gearbox interaction with more train controls"
+        caption: "Initial gearbox interaction with more train controls."
     },
     {
         src: OldShelf, alt: "OldShelf", group: "LegacyMechanics",
@@ -297,11 +297,11 @@ const locomotoGifs = [
     },
     {
         src: OldDorian, alt: "OldDorian", group: "LegacyMechanics",
-        caption: "Unfinished trading interaction with certain NPCs in early development"
+        caption: "Unfinished trading interaction with certain NPCs in early development."
     },
     {
         src: FriendshipHeart, alt: "FriendshipHeart", group: "LegacyMechanics",
-        caption: "Heart particles when NPC gain more friendship points, one of the first things I made in the game"
+        caption: "Heart particles when NPC gain more friendship points, one of the first things I made in the game."
     },
 ];
 
@@ -328,7 +328,7 @@ const groups = [
  </p>                
                       <p><strong>Main Features & My Contributions:</strong></p>
                     <ul>
-                    <li>Built an extendable pressure, speed, and train control system that underpins multiple gameplay interactions including furnace interaction, gearbox interaction, whilstle interaction, coal interaction, etc. Ensuring stability and flexibility so I could rapidly implement subsequent changes.
+                    <li>Built an extendable pressure, speed, and train control system that underpins multiple gameplay interactions including furnace interaction, gearbox interaction, whilstle interaction, coal interaction, and ensured stability and flexibility so I could rapidly implement subsequent changes.
                     </li>
                     <li>Utilized AI navigation, Timeline, and other Unity plugins and components, collaborate closely with designers and animator for creating and refining smooth and satisfying interaction in all train control related interactions.
 </li></ul>
@@ -339,7 +339,7 @@ const groups = [
         description:
             (
                 <div className="gif-card-description" >
-                    <p>Crafting in Locomoto is the main way for players to get furniture, which are an essential part of customization in the game.
+                    <p>Crafting in Locomoto is the main way for players to get furniture, which is an essential part of customization in the game.
                     We had at least three different ways of crafting at different stage of development, while we finally chose to go with this Minecraft-like crafting after I made a prototype of it. </p>
                       <p><strong>Main Features & My Contributions:</strong></p>
                      <ul>
@@ -347,7 +347,7 @@ const groups = [
                     and different parts in a furniture can have different colors depending on which resources player used in crafting. 
                     </li>
 
-                    <li>Implemented unity editor tools for designers and artists to easily create patterns and deicde which parts of furniture can be customizable with which type of resource.
+                    <li>Implemented unity editor tools for designers and artists to easily create patterns and decide which parts of furniture can be customizable with which type of resource.
                     </li>
                     <li>Utilized bitwise operations in crafting system, which improved computational efficiency and reduced performance cost.
                     </li>
@@ -385,7 +385,7 @@ const groups = [
                       <p><strong>Main Features & My Contributions:</strong></p>
                     <ul>
                     <li>
-                         Prototyped gameplay features rapidly—train customization, fishing, planting, item delivery, quest-board mechanics, and NPC interactions—to meet quest needs, then developed each into a complete, standalone gameplay mechanic
+                         Prototyped gameplay features rapidly—train customization, fishing, planting, item delivery, quest-board mechanics, and NPC interactions—to meet quest needs, then developed each into a complete, standalone gameplay mechanic.
                     </li>
                     <li>
                         Built flexible Unity editor tools so designers and artists could configure every detail without code, such as defining delivery point conditions, mapping paint bucket colors and materials to wagon parts, specifying fish to certain lakes, setting lavender seed growth timers and vase rewards, and more.
@@ -487,6 +487,7 @@ function GifSection({ title, description, gifs }) {
           </>
         )}
         {open && (
+            <>
           <div className="gif-grid expanded-grid">
             {gifs.map((gif, idx) => (
               <div className="gif-item full" key={idx}>
@@ -495,6 +496,13 @@ function GifSection({ title, description, gifs }) {
               </div>
             ))}
           </div>
+          {/* Expanded state arrow, rotated 180° */}
+            <div className="preview-overlay expanded-overlay">
+              <div className="arrow-group">
+                <span className="overlay-arrow-rotated" />
+              </div>
+            </div>
+          </>
         )}
       </div>
     </section>
@@ -615,14 +623,14 @@ function Locomoto() {
               <div className="site-container locomoto-intro left-align">
                   <p className="home-about-body white-text">
                       <b className="purple">Locomoto </b>
-                      is a cozy life-simulation adventure game,
+                      is a cozy life-simulation adventure train game,
                       which launched on 
                       <a href="https://store.steampowered.com/app/2328650/Locomoto/" className="purple bold-link"> Steam </a> 
-                      in April 2025 and will release on  <a href="https://eu.store.thqnordic.com/en/Locomoto-NSW/9120131602940" className="purple bold-link">Nintendo Switch</a> in upcoming 2025. As the <b className="purple">Gameplay Programmer</b>, I was responsible for implementing and refining most of the core gameplay mechanics and systems—including train controls, NPC passenger interactions, resource loops, crafting systems, and various customizable interactive items and features in Unity and C#. Throughout the project, I worked closely and proactively with designers and artists, rapidly prototyping features, building specialized tools to streamline our development process, and iteratively polishing gameplay elements to deliver a relaxing and engaging player experience.
+                      in April 2025 and will release on  <a href="https://eu.store.thqnordic.com/en/Locomoto-NSW/9120131602940" className="purple bold-link">Nintendo Switch</a> in upcoming 2025. As the <b className="purple">Gameplay Programmer</b>, I was responsible for implementing and refining core gameplay mechanics and systems—including train controls, NPC passenger interactions, resource loops, crafting systems, and various customizable interactive items and features in <b className="purple">Unity and C# </b>. Throughout the project, I worked closely and proactively with other developers, rapidly prototyping features, resolving miscellaneous issues in daily work, building specialized tools to streamline our development process, and iteratively polishing gameplay elements to deliver a relaxing and engaging player experience.
                   </p>
 
                   <p className="home-about-body white-text">
-                      My approach to programming emphasizes high-quality, maintainable, and extensible code. I proactively minimized bugs through rigorous testing and immediate fixes, and structured my implementations to ensure flexibility, allowing substantial feature changes with minimal code adjustments. Additionally, I effectively utilized industry-standard Unity plugins including Cinemachine, DoTween, Dialogue System, Behavior Designer, Easy Save, More Mountains Feedback, Doozy UI System and Grid Placement System, significantly enhancing development efficiency and gameplay polish.
+                      My approach to programming emphasizes high-quality, maintainable, and extensible code. I proactively minimized bugs through testing and immediate fixes, and structured my implementations to ensure flexibility, allowing substantial feature changes with minimal code adjustments. Additionally, I utilized multiple Unity plugins including Cinemachine, DoTween, Dialogue System, Behavior Designer, Easy Save, More Mountains Feedback, Doozy UI System and Grid Placement System into the game, significantly enhanced development efficiency and gameplay polish.
                   </p>
 
                   <p className="home-about-body white-text">

@@ -623,14 +623,15 @@ function Locomoto() {
               <div className="site-container locomoto-intro left-align">
                   <p className="home-about-body white-text">
                       <b className="purple">Locomoto </b>
-                      is a cozy life-simulation adventure train game,
-                      which launched on 
-                      <a href="https://store.steampowered.com/app/2328650/Locomoto/" className="purple bold-link"> Steam </a> 
-                      in April 2025 and will release on  <a href="https://eu.store.thqnordic.com/en/Locomoto-NSW/9120131602940" className="purple bold-link">Nintendo Switch</a> in upcoming 2025. As the <b className="purple">Gameplay Programmer</b>, I was responsible for implementing and refining core gameplay mechanics and systems—including train controls, NPC passenger interactions, resource loops, crafting systems, and various customizable interactive items and features in <b className="purple">Unity and C# </b>. Throughout the project, I worked closely and proactively with other developers, rapidly prototyping features, resolving miscellaneous issues in daily work, building specialized tools to streamline our development process, and iteratively polishing gameplay elements to deliver a relaxing and engaging player experience.
+                      is a cozy life-simulation adventure game,
+                      which launched on
+                      <a href="https://store.steampowered.com/app/2328650/Locomoto/" className="purple bold-link"> Steam </a>
+                      in April 2025 and will release on  <a href="https://eu.store.thqnordic.com/en/Locomoto-NSW/9120131602940" className="purple bold-link">Nintendo Switch</a> in upcoming 2025. As the <b className="purple">Gameplay Programmer</b>, I was responsible for implementing and refining a wide range of gameplay features and systems, including train controls, NPC passenger interactions, resource loops, crafting systems, and various customizable interactive items and features.
+                      Throughout the development process, I have been working closely with other developers, rapidly prototyping features, building specialized tools to boost our development process, and iteratively polishing gameplay elements to deliver a relaxing and engaging player experience together.
                   </p>
 
                   <p className="home-about-body white-text">
-                      My approach to programming emphasizes high-quality, maintainable, and extensible code. I proactively minimized bugs through testing and immediate fixes, and structured my implementations to ensure flexibility, allowing substantial feature changes with minimal code adjustments. Additionally, I utilized multiple Unity plugins including Cinemachine, DoTween, Dialogue System, Behavior Designer, Easy Save, More Mountains Feedback, Doozy UI System and Grid Placement System into the game, significantly enhanced development efficiency and gameplay polish.
+                     I'm always pursuing high-quality, maintainable, and extensible code. I proactively minimized bugs through testing and immediate fixes, and structured my implementations to ensure flexibility, allowing substantial feature changes with minimal code adjustments. Additionally, I utilized and adapted multiple Unity plugins into the game, including Cinemachine, DoTween, Dialogue System, Behavior Designer, Easy Save, More Mountains Feedback, Doozy UI System, Grid Placement System, and etc, which strengthened development efficiency and gameplay polish.
                   </p>
 
                   <p className="home-about-body white-text">

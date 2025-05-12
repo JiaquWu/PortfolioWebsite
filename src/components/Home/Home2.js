@@ -23,26 +23,26 @@ export default function Home2() {
                         {/* —— About Me —— */}
                         <h2 className="section-heading">About Me</h2>
                         <p className="locomoto-intro-desc white-text">
-                            Back in <strong>2018</strong>, while attending university, I discovered that making games was not just a hobby-it was my <strong>true calling</strong>, a passion guiding every step of my journey since then. Starting from scratch, I began teaching myself <b className="purple">C#</b> and <b className="purple">Unity</b>, actively participating in numerous Game Jams, and creating a wide range of <a href="https://jiaqu-wu.itch.io/" className="purple bold-link"> mini-games</a> to steadily hone my skills.
+                            Back in <strong>2018</strong>, I realized that making games was was my <strong>true calling</strong>. At that time, I started teaching myself <b className="purple">C#</b> and <b className="purple">Unity</b>, participated in numerous Game Jams, and created a wide range of <a href="https://jiaqu-wu.itch.io/" className="purple bold-link"> mini-games</a>.
                         </p>
                         <p className="locomoto-intro-desc white-text">
-                            In <strong>2020</strong>, I moved to Sweden to further pursue this passion professionally. During my two years of studies here, I contributed as a game programmer to several game projects and had the opportunity to intern at <a href="https://www.blackdropinteractive.com/" className="purple bold-link"> Blackdrop Interactive</a>, where I made contributions to <a href="https://store.steampowered.com/app/1129310/Receiver_2/" className="purple bold-link">Receiver 2</a>. After completing my studies, I joined <a href="https://greentiledigital.com/" className="purple bold-link"> Green Tile Digital</a> and spent more than two years as a <b className="purple">Gameplay Programmer</b> on <a href="/#/Locomoto" className="purple bold-link">Locomoto</a>
-                             , significantly contributing to the development of many core gameplay systems and features.
+                            In <strong>2020</strong>, I moved to Sweden to further pursue this passion in a more professional way. During my two years of studies in Sweden, I contributed to several game projects as a game programmer and had the opportunity to do an internship at <a href="https://www.blackdropinteractive.com/" className="purple bold-link"> Blackdrop Interactive</a>, where I made contributions to <a href="https://store.steampowered.com/app/1129310/Receiver_2/" className="purple bold-link">Receiver 2</a>. After completing my studies, I joined <a href="https://greentiledigital.com/" className="purple bold-link"> Green Tile Digital</a> and spent more than two years as a <b className="purple">Gameplay Programmer</b> on <a href="/#/Locomoto" className="purple bold-link">Locomoto</a>
+                             , and I have been consistently contributing to various core gameplay systems and features in the game.
                         </p>
 
                         {/* —— Skills & Expertise —— */}
                         <h2 className="section-heading">Skills &amp; Expertise</h2>
                         <p className="locomoto-intro-desc white-text">
-                            Throughout the years, I've continuously strengthened my proficiency with <b className="purple">C# and Unity</b>, comfortably utilizing them to implement a diverse array of gameplay features, interactive systems, and development tools. While there's always more to learn, I'm confident in my ability to create clean, robust, and extensible solutions using object-oriented programming principles.
+                            Throughout the years, I've continuously strengthened my understanding and proficiency with <b className="purple">C# and Unity</b>, and become more and more comfortable using them to implement deverse gameplay features, game systems, and also custom tools. While there's always more to learn, I'm confident in my ability to deliver clean, stable, and extensible code using object-oriented programming principles.
                         </p>
                         <p className="locomoto-intro-desc white-text">
-                            Additionally, I have experience with <b className="purple">Unreal Engine's Blueprints</b> and am actively developing my skills in <b className="purple">C++</b> for future personal projects. I'm also proficient with version control tools like <b className="purple">Git</b>, <b className="purple">Plastic</b>, and <b className="purple">Perforce</b>, ensuring efficient team collaboration.
+                            Additionally, I have experience with <b className="purple">Unreal Engine's Blueprints</b> and am actively practicing my skills in <b className="purple">C++</b> with personal projects. I'm also comfortable with version control systems like <b className="purple">Git</b>, <b className="purple">Plastic</b>, and <b className="purple">Perforce</b>, which boost collaborating with other developers.
                         </p>
                         <p className="locomoto-intro-desc white-text">
-                            My passion lies in implementing engaging gameplay mechanics and polished game features. I enjoy iterating and refining these systems extensively, always aiming to deliver an outstanding player experience. I also excel at developing custom tools to support my team and rapidly resolve technical challenges.
+                            My passion lies in implementing engaging and creative gameplay mechanics and polished game features, and I really enjoy the process of continously iterating and refining them. Creating something new and fun excites me a lot, and I'm always pursuing to deliver an enjoyable and memorable player experience. Apart from that, I'm also passionate about developing custom tools to support my team and rapidly resolve technical issues in day-to-day development.
                         </p>
                         <p className="locomoto-intro-desc white-text">
-                            I thrive on diving deeply into complex systems, effectively utilizing various tools and plugins to overcome technical challenges, and continuously pushing my skills and expertise further in the fascinating and ever-evolving world of game development.
+                            I'm always down to diving deeply into complex game systems and utilizing various tools and plugins to solve technical issues and challenges, and pushing my skills further in the world of game development step by step.
                         </p>
                     </Col>
 

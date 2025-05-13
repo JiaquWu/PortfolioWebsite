@@ -10,11 +10,40 @@ import Particle from "../Particle";
 // import bitsOfCode from "../../Assets/Projects/blog.png";
 import LargeProjectCards from "./LargeProjectCards";
 
+const groups = [
+    { key: "Locomoto", title: "Locomoto" },
+    { key: "Receiver2", title: "Receiver2" },
+    { key: "Personal-projects-1-3", title: "Personal projects 1-3" },
+    { key: "Personal-projects-4-6", title: "Personal projects 4-6" },
+    { key: "Personal-projects-7-8", title: "Personal projects 7-8" },
+    { key: "Other-projects", title: "Other projects" }
+]
+
 function Projects() {
   return (
     <Container fluid className="project-section">
       <Particle />
-      <Container>
+          <Container>
+              {/* 侧边导航栏 */}
+              <nav className="side-nav">
+                  {groups.map((g) => (
+                      <a
+                          key={g.key}
+                          href={`#${g.key}`}
+                          className="nav-link"
+                          onClick={(e) => {
+                              e.preventDefault();
+                              const el = document.getElementById(g.key);
+                              if (el) {
+                                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                              }
+                          }}
+                      >
+                          {g.title}
+                      </a>
+                  ))}
+              </nav>
+
         <h1 className="project-heading">
                   <b className="purple bold-link">My Journey</b> 
         </h1>
@@ -26,8 +55,9 @@ function Projects() {
               }}>
                   From early solo prototypes to commercial releases, these selected projects are footprints along the winding path of my journey as a game developer
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "20px"}}>
-        <LargeProjectCards
+              <Row id="Locomoto" style={{ justifyContent: "center", paddingBottom: "20px"}}>
+                  <LargeProjectCards
+                      
               videoTitle = "Locomoto"
               videoLink = "https://www.youtube.com/embed/JiR_MJAEnCA"
               videoHeight = "720"
@@ -39,8 +69,9 @@ function Projects() {
                       My contribution:<br></br>· See <a href="/#/Locomoto" className="purple bold-link">Locomoto</a></h6>  
             />
         </Row>
-        <Row style={{ justifyContent: "center", paddingBottom: "20px"}}>
-        <LargeProjectCards
+              <Row id="Receiver2" style={{ justifyContent: "center", paddingBottom: "20px"}}>
+                  <LargeProjectCards
+                      
               videoTitle = "Receiver 2"
               videoLink = "https://www.youtube.com/embed/g-SgoKBIE24"
               videoHeight = "720"
@@ -55,7 +86,7 @@ function Projects() {
             />
         </Row>
         
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+              <Row id="Personal-projects-1-3" style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
               videoTitle = "Seabird Project"
@@ -125,7 +156,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+                  <Col id="Personal-projects-4-6" md={4} className="project-card">
             <ProjectCard  
               title="FPS Project"
               videoTitle = "FPS Project"
@@ -194,7 +225,7 @@ function Projects() {
               demoLink="https://jiaqu-wu.itch.io/procrastinationsg"
             />
           </Col>
-          <Col md={4} className="project-card">
+                  <Col id="Personal-projects-7-8" md={4} className="project-card">
             <ProjectCard 
               videoTitle = "Buddy"
               videoLink = "https://www.youtube.com/embed/jEAGbsIGn2E"
@@ -239,7 +270,7 @@ function Projects() {
             />
           </Col>
         </Row>
-        <Row style={{ justifyContent: "center", paddingBottom: "20px"}}>
+              <Row id="Other-projects" style={{ justifyContent: "center", paddingBottom: "20px"}}>
         <LargeProjectCards 
               videoTitle = "Other Projects"
               videoLink = "https://www.youtube.com/embed/skx8nTCCy2A"

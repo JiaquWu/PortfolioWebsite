@@ -717,6 +717,19 @@ div.locomoto-intro.left-align > p.home-about-body {
     scroll-margin-top: 100px;
 }
 
+/* apply to all of your target containers */
+.gif-section,
+#Locomoto,
+#Receiver2,
+#Personal-projects-1-3,
+#Personal-projects-4-6,
+#Personal-projects-7-8,
+#Other-prejects
+/* …add any other IDs you’re scrolling to… */ {
+    /* reserve 80px of space above each when scrolling */
+    scroll-margin-top: 80px;
+}
+
 .gif-preview-header {
     margin-bottom: 1rem;
 }

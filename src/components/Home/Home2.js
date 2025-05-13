@@ -42,7 +42,7 @@ export default function Home2() {
                             
                         {/*</p>*/}
                         <p className="locomoto-intro-desc white-text">
-                            My strongest passion lies in implementing engaging and creative gameplay mechanics, game systems and polished game features, and I do really enjoy the process of continously iterating and refining them. Creating something new and fun excites me a lot, and I'm always in the pursuit of crafting enjoyable and memorable player experiences.
+                            My strongest passion lies in implementing engaging and creative gameplay mechanics, game systems and polished game features, and I do really enjoy the process of continuously iterating and refining them. Creating something new and fun excites me a lot, and I'm always in the pursuit of crafting enjoyable and memorable player experiences.
                             Apart from that, I enjoy helping other developers quickly resolve miscellaneous issues in day-to-day development and building custom tools to support my team. I'm always into complex game systems, various tools and plugins to solve technical issues and challenges, and I long to push my skills further in the fantastic world of game development step by step.
                         </p>
                         {/*<p className="locomoto-intro-desc white-text">*/}

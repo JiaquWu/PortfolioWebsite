@@ -724,7 +724,7 @@ div.locomoto-intro.left-align > p.home-about-body {
 #Personal-projects-1-3,
 #Personal-projects-4-6,
 #Personal-projects-7-8,
-#Other-prejects
+#Other-projects
 /* …add any other IDs you’re scrolling to… */ {
     /* reserve 80px of space above each when scrolling */
     scroll-margin-top: 80px;

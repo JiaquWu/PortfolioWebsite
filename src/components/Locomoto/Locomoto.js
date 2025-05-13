@@ -626,7 +626,7 @@ function Locomoto() {
                       is a cozy life-simulation adventure game,
                       which launched on
                       <a href="https://store.steampowered.com/app/2328650/Locomoto/" className="purple bold-link"> Steam </a>
-                      in April 2025 and will release on  <a href="https://eu.store.thqnordic.com/en/Locomoto-NSW/9120131602940" className="purple bold-link">Nintendo Switch</a> in upcoming 2025. As the <b className="purple">Gameplay Programmer</b>, I was responsible for implementing and refining a wide range of gameplay features and systems, including train controls, NPC passenger interactions, resource loops, crafting systems, and various customizable interactive items and features.
+                      in April 2025 and will release on  <a href="https://eu.store.thqnordic.com/en/Locomoto-NSW/9120131602940" className="purple bold-link">Nintendo Switch</a> in upcoming 2025. As a <b className="purple">Gameplay Programmer</b>, I was responsible for implementing and refining a wide range of gameplay features and systems, including train controls, NPC passenger interactions, resource loops, crafting systems, and various customizable interactive items and features.
                       Throughout the development process, I have been working closely with other developers, rapidly prototyping features, building specialized tools to boost our development process, and iteratively polishing gameplay elements to deliver a relaxing and engaging player experience together.
                   </p>
 

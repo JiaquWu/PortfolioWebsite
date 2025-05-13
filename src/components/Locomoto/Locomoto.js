@@ -404,7 +404,7 @@ const groups = [
                       <p><strong>Main Features & My Contributions:</strong></p>
                     <ul>
                     <li>
-                         Implemented a wide range of interactive items to meet specific gameplay needs—seats that support both player and NPC seating; foldable tables; machines dispensing various items; consumable foods and beverages; garbage bags with multiple ways to store and retrieve garbage ; dedicated tool, paint-bucket, and wallpaper storage containers; and spin-up pinwheels.
+                         Implemented a wide range of interactive items to meet specific gameplay needs—seats that support both player and NPC seating; foldable tables; machines dispensing various items; consumable foods and beverages; garbage bags with multiple ways to store and retrieve garbage ; dedicated tool, paint-bucket, and wallpaper storage containers; and spin-up pinwheels, etc.
                     </li>
                     <li>
                         Engaged with other developers to refine every detail—iterating intensively (for example, finalizing the seating interaction to everyone's satisfaction just one week before launch) so that each item interaction feels intuitive, comfortable, and cohesive in the final game.
@@ -421,7 +421,7 @@ const groups = [
             (
                 <div className="gif-card-description" >
                     <p>
-                        Locomoto includes a variety of fun, diverse interactions that don't each need their own system: everything from chopping and mining to map-stamping and chest-opening, as shown in the GIFs below, is powered by our single generic-interaction framework.
+                        Locomoto includes a variety of fun, diverse interactions that don't each need their own system: everything from chopping and mining to map-stamping and chest-opening, as shown in the GIFs below, is powered by our <b>Single</b> generic-interaction framework.
  </p>                
                       <p><strong>Main Features & My Contributions:</strong></p>
                     <ul>
@@ -631,7 +631,7 @@ function Locomoto() {
                   </p>
 
                   <p className="home-about-body white-text">
-                     I'm always pursuing high-quality, maintainable, and extensible code. I proactively minimized bugs through testing and immediate fixes, and structured my implementations to ensure flexibility, allowing substantial feature changes with minimal code adjustments. Additionally, I utilized and adapted multiple Unity plugins into the game, including Cinemachine, DoTween, Dialogue System, Behavior Designer, Easy Save, More Mountains Feedback, Doozy UI System, Grid Placement System, and etc, which strengthened development efficiency and gameplay polish.
+                     I'm always in the pursuit of high-quality, maintainable, and extensible code. I proactively minimized bugs through testing and immediate fixes, and structured my implementations to ensure flexibility, allowing substantial feature changes with minimal code adjustments. Additionally, I utilized and adapted multiple Unity plugins into the game, including Cinemachine, DoTween, Dialogue System, Behavior Designer, Easy Save, More Mountains Feedback, Doozy UI System, Grid Placement System, and etc, which strengthened development efficiency and gameplay polish.
                   </p>
 
                   <p className="home-about-body white-text">

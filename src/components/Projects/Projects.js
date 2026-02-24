@@ -268,7 +268,7 @@ function Projects() {
               title="AI Life Simulation"
               description=<h6 style={{lineHeight:1.5}}>
               <i className="purple bold-link">Dec 2025</i><br></br>
-              A lightweight Unity 2D AI life simulation where predators, prey, and food interact through utility-based decision-making, steering behaviors, and UI-driven parameter tuning to observe emergent behavior.
+              A lightweight Unity 2D AI life simulation where predators, prey, and food interact through utility-based decision-making, steering behaviors, and UI-driven parameter tuning to observe emergent behavior, and made in a week.
                   <br></br>
                   <br></br>👤 <span className="purple bold-link">Solo project</span> 
 
@@ -286,13 +286,13 @@ function Projects() {
 <Col md={4} className="project-card">
             <ProjectCard
               videoTitle = "MapleSurvivor"
-              videoLink = ""
+              videoLink = "https://www.youtube.com/embed/uhc3aZbXWe0"
               videoHeight = "213"
               videoWidth = "100%"
               title="Vampire Survivor Project"
               description=<h6 style={{lineHeight:1.5}}>
               <i className="purple bold-link">Oct 2025</i><br></br>
-              A modular, data-driven bullet-heaven game built in Unity, focused on scalable entity architecture, performance optimization, and maintainable gameplay systems for large-scale enemy simulations.
+              A modular, data-driven bullet-heaven game built in Unity, focused on scalable entity architecture, performance optimization, and maintainable gameplay systems for large-scale enemy simulations, and made in 2 weeks.
                   <br></br>
                   <br></br>👤 <span className="purple bold-link">Solo project</span> 
 

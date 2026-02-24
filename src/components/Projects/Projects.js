@@ -11,13 +11,12 @@ import Particle from "../Particle";
 import LargeProjectCards from "./LargeProjectCards";
 
 const groups = [
-    { key: "Locomoto", title: "Locomoto" },
-    { key: "Receiver2", title: "Receiver2" },
-    { key: "Personal-projects-1-3", title: "Personal projects 1-3" },
-    { key: "Personal-projects-4-6", title: "Personal projects 4-6" },
-    { key: "Personal-projects-7-8", title: "Personal projects 7-8" },
-    { key: "Other-projects", title: "Other projects" }
-]
+  { key: "Locomoto", title: "Locomoto" },
+  { key: "Receiver2", title: "Receiver2" },
+  { key: "MultiProgrammer", title: "Team Projects (Multi-Programmer)" },
+  { key: "SoleProgrammer", title: "Projects as Sole Programmer" },
+  { key: "Other-projects", title: "Other projects" }
+];
 
 function Projects() {
   return (
@@ -32,12 +31,23 @@ function Projects() {
                           href={`#${g.key}`}
                           className="nav-link"
                           onClick={(e) => {
-                              e.preventDefault();
-                              const el = document.getElementById(g.key);
-                              if (el) {
-                                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                              }
-                          }}
+  e.preventDefault();
+  const el = document.getElementById(g.key);
+  if (el) {
+    const defaultOffset = -90;
+    const topOffset = -170; // 👈 Locomoto 专用
+
+    const yOffset =
+      g.key === "Locomoto" ? topOffset : defaultOffset;
+
+    const y =
+      el.getBoundingClientRect().top +
+      window.pageYOffset +
+      yOffset;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+}}
                       >
                           {g.title}
                       </a>
@@ -85,9 +95,76 @@ function Projects() {
                   <br></br>· Paired with another programmer to prototype new weapon variants and map layouts in Unity.</h6>  
             />
         </Row>
-        
-              <Row id="Personal-projects-1-3" style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+        {/* ===================== */}
+{/* Team Projects (Multi-Programmer) */}
+{/* ===================== */}
+<h2
+  id="MultiProgrammer"
+  className="project-heading"
+  style={{ marginTop: "40px" }}
+>
+  <b className="purple bold-link">Team Projects (Multi-Programmer)</b>
+</h2>
+<p
+  style={{
+    color: "white",
+    zIndex: 10,
+    position: "relative",
+    pointerEvents: "auto",
+    fontStyle: "italic",
+    marginBottom: "20px",
+  }}
+>
+  Projects developed in teams with multiple programmers.
+</p>
+<Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+  <Col md={4} className="project-card">
+            <ProjectCard
+              videoTitle = "Gracebound Trailer"
+              videoLink = ""
+              videoHeight = "213"
+              videoWidth = "100%"
+              title="Gracebound"
+              description=<h6 style={{lineHeight:1.5}}>
+              <i className="purple bold-link">Jan 2026 - Feb 2026</i><br></br>
+              Gracebound is a fast-paced single-player hack-and-slash action game focused on fluid combat, combo chaining, and ability-driven arena encounters.
+                  <br></br>
+                  <br></br>👥 Team: 3 Programmers, 4 Designers
+                  <br></br>
+              <br></br>My contribution: <br></br>· Designed and implemented a modular <span className="purple bold-link">action-combat</span> framework supporting combo chains, dash-cancels, and ability interruption inspired by Hades.
+                  <br></br>· Built a flexible policy-based action system allowing actions to interrupt and override each other, enabling high player control and future extensibility.
+                  <br></br>· Architected a data-driven ability framework (ScriptableObject-based) integrating animation events, hit detection, and gameplay effects.
+              <br></br>· Implemented a code-driven animation control pipeline, decoupling gameplay logic from Unity’s Animator state transitions for greater flexibility and scalability.
+              </h6>
+              //ghLink="https://github.com/soumyajit4419/Chatify"
+              //demoLink="https://futuregames.itch.io/starbeat"
+            />
+          </Col>
+  <Col md={4} className="project-card">
+            <ProjectCard
+              videoTitle = "Starbeat Trailer"
+              videoLink = "https://www.youtube.com/embed/VWuybmkzGZ4"
+              videoHeight = "213"
+              videoWidth = "100%"
+              title="Starbeat"
+              description=<h6 style={{lineHeight:1.5}}>
+              <i className="purple bold-link">Nov 2025</i><br></br>
+              Starbeat is an accessible and addictive rhythm game where you dream of catching stars as an astronaut exploring spectacular planets. 
+                  <br></br>
+                  <br></br>👥 Team: 4 Programmers, 3 Artists, 5 Designers
+                  <br></br>
+              <br></br>My contribution: <br></br>· Architected the core <span className="purple bold-link">rhythm gameplay system</span>, ensuring beat-accurate interactions and responsive player feedback.
+  
+                  <br></br>· Built and iterated a <span className="purple bold-link">Unity–FMOD</span> level editing pipeline, enabling designers to author rhythm sequences efficiently.
+                  <br></br>· Collaborated closely with designers and audio developers to continuously polish gameplay feel through rapid iteration.
+              <br></br>· Refined 3D note movement and timing behavior to enhance clarity, readability, and overall player feel.
+              </h6>
+              //ghLink="https://github.com/soumyajit4419/Chatify"
+              demoLink="https://futuregames.itch.io/starbeat"
+            />
+          </Col>
+          
+  <Col md={4} className="project-card">
             <ProjectCard
               videoTitle = "Seabird Project"
               videoLink = "https://www.youtube.com/embed/3BfYPKANWiU"
@@ -107,30 +184,6 @@ function Projects() {
               </h6>
               //ghLink="https://github.com/soumyajit4419/Chatify"
               demoLink="https://jiaqu-wu.itch.io/jump"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              videoTitle = "Auto-Battler Project"
-              videoLink = "https://www.youtube.com/embed/IGpLF2rV2hg"
-              videoHeight = "213"
-              videoWidth = "100%"
-              title="Auto-Battler Project"
-              description=<h6 style={{lineHeight:1.5}}>
-              <i className="purple bold-link">Jul 2022 - Sep 2022</i><br></br>
-              It's a game project that I have alone which contains basic features of the <span className="purple bold-link">auto-battler</span> game genre in single player game mode with Unity, including some of the more complex but interesting game systems:
-<br></br>
-                  <br></br>👤 <span className="purple bold-link">Solo project</span> 
-
-                  <br></br>
-              <br></br>· Utilized <span className="purple bold-link">A-star</span> algorithm to implement a dynamic pathfinding system for the champion during combat, and a <span className="purple bold-link">finite state machine</span> was used to implement changes in the champion's behaviour in different states, which together implemented the champion's AI system.
-                  <br></br>· Built the champion's <span className="purple bold-link">attributes system</span>, <span className="purple bold-link">buff system</span>, and <span className="purple bold-link">ability system</span> using Scriptable Objects and C# object-oriented features. These together with the game's event system provide a solid infrastructure that allows for highly scalable game development and greatly reduces code coupling.
-
-              </h6>
-              isGithub = "true"
-              ghLink="https://github.com/JiaquWu/CardGamePractice"
-              //demoLink=""
             />
           </Col>
 
@@ -155,8 +208,129 @@ function Projects() {
               //demoLink="https://editor.soumya-jit.tech/"              
             />
           </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              videoTitle = "Call of Wind"
+              videoLink = "https://www.youtube.com/embed/_C2x1P2uSmw"
+              videoHeight = "213"
+              videoWidth = "100%"
+              title="Call of Wind"
+              description=<h6 style={{lineHeight:1.5}}>
+              <i className="purple bold-link">Jul 2019 - Sep 2019</i><br></br>
+              Call of Wind is a 2d puzzle platformer game that I worked on with other student developers for around two months in 2019, and it won a prize in a student game development competition in China at the time.
+                  <br></br>
+                  <br></br>👥 Team: 2 Programmers, 2 Artists, 1 Designer
+                  <br></br>
+              <br></br>My contribution:
+              <br></br>· Design and implemented wind-related puzzles and game mechanics.
+              <br></br>· Constantly optimised and iterated on game details based on player feedback.
+              </h6>
+              //ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
+               demoLink="https://jiaqu-wu.itch.io/call-of-wind-v10"      //<--------Please include a demo link here 
+            />
+          </Col>
+  {/* ✅ 把 Jump / Online Project / Call of Wind / 你新增的2个（多程序员）卡片放这里 */}
+  {/* 建议这一组用 md={6} 让两列更舒服 */}
+</Row>
 
-                  <Col id="Personal-projects-4-6" md={4} className="project-card">
+{/* ===================== */}
+{/* Projects as Sole Programmer */}
+{/* ===================== */}
+<h2
+  id="SoleProgrammer"
+  className="project-heading"
+  style={{ marginTop: "40px" }}
+>
+  <b className="purple bold-link">Projects as Sole Programmer</b>
+</h2>
+<p
+  style={{
+    color: "white",
+    zIndex: 10,
+    position: "relative",
+    pointerEvents: "auto",
+    fontStyle: "italic",
+    marginBottom: "20px",
+  }}
+>
+  Projects where I was the only programmer (solo or with artists/designers).
+</p>
+
+<Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+  {/* ✅ 把其它所有项目卡片（唯一程序员 / solo）+ 新增的2个放这里 */}
+  {/* 建议这一组保持 md={4} 三列 */}
+  <Col md={4} className="project-card">
+            <ProjectCard
+              videoTitle = "AI Life Simulation"
+              videoLink = "https://www.youtube.com/embed/fJRRCveD9m8"
+              videoHeight = "213"
+              videoWidth = "100%"
+              title="AI Life Simulation"
+              description=<h6 style={{lineHeight:1.5}}>
+              <i className="purple bold-link">Dec 2025</i><br></br>
+              A lightweight Unity 2D AI life simulation where predators, prey, and food interact through utility-based decision-making, steering behaviors, and UI-driven parameter tuning to observe emergent behavior.
+                  <br></br>
+                  <br></br>👤 <span className="purple bold-link">Solo project</span> 
+
+                  <br></br>
+              <br></br>· Designed a modular AI architecture inspired by GOAP and Utility AI, enabling agents to dynamically evaluate survival priorities.
+                  <br></br>· Implemented a utility-driven action selection system decoupled from steering behaviors to support scalable and extensible simulation logic.
+<br></br>· Built a shared movement pipeline (goal seeking, avoidance, boundary steering, optional flocking) to unify agent locomotion.
+<br></br>· Developed runtime parameter controls and visual debugging tools to experiment with and observe emergent behaviors.
+              </h6>
+              isGithub = "true"
+              ghLink="https://github.com/JiaquWu/AI-Life-Simulation"
+              //demoLink=""
+            />
+          </Col>
+<Col md={4} className="project-card">
+            <ProjectCard
+              videoTitle = "MapleSurvivor"
+              videoLink = ""
+              videoHeight = "213"
+              videoWidth = "100%"
+              title="Vampire Survivor Project"
+              description=<h6 style={{lineHeight:1.5}}>
+              <i className="purple bold-link">Oct 2025</i><br></br>
+              A modular, data-driven bullet-heaven game built in Unity, focused on scalable entity architecture, performance optimization, and maintainable gameplay systems for large-scale enemy simulations.
+                  <br></br>
+                  <br></br>👤 <span className="purple bold-link">Solo project</span> 
+
+                  <br></br>
+              <br></br>· Designed a modular entity architecture separating configuration, runtime logic, and presentation to support scalable content expansion.
+                  <br></br>· Implemented a data-driven gameplay framework enabling reusable enemy definitions, upgrade systems, and stat scaling without modifying core code.
+<br></br>· Built a high-performance object pooling and centralized update pipeline to efficiently handle large numbers of enemies and projectiles.
+<br></br>· Structured the project with long-term extensibility in mind, supporting future features such as co-op, save systems, and expanded ability mechanics.
+              </h6>
+              isGithub = "true"
+              ghLink="https://github.com/JiaquWu/MapleSurvivors"
+              //demoLink=""
+            />
+          </Col>
+  <Col md={4} className="project-card">
+            <ProjectCard
+              videoTitle = "Auto-Battler Project"
+              videoLink = "https://www.youtube.com/embed/IGpLF2rV2hg"
+              videoHeight = "213"
+              videoWidth = "100%"
+              title="Auto-Battler Project"
+              description=<h6 style={{lineHeight:1.5}}>
+              <i className="purple bold-link">Jul 2022 - Sep 2022</i><br></br>
+              It's a game project that I have alone which contains basic features of the <span className="purple bold-link">auto-battler</span> game genre in single player game mode with Unity, including some of the more complex but interesting game systems:
+<br></br>
+                  <br></br>👤 <span className="purple bold-link">Solo project</span> 
+
+                  <br></br>
+              <br></br>· Utilized <span className="purple bold-link">A-star</span> algorithm to implement a dynamic pathfinding system for the champion during combat, and a <span className="purple bold-link">finite state machine</span> was used to implement changes in the champion's behaviour in different states, which together implemented the champion's AI system.
+                  <br></br>· Built the champion's <span className="purple bold-link">attributes system</span>, <span className="purple bold-link">buff system</span>, and <span className="purple bold-link">ability system</span> using Scriptable Objects and C# object-oriented features. These together with the game's event system provide a solid infrastructure that allows for highly scalable game development and greatly reduces code coupling.
+
+              </h6>
+              isGithub = "true"
+              ghLink="https://github.com/JiaquWu/CardGamePractice"
+              //demoLink=""
+            />
+          </Col>
+<Col id="Personal-projects-4-6" md={4} className="project-card">
             <ProjectCard  
               title="FPS Project"
               videoTitle = "FPS Project"
@@ -177,7 +351,6 @@ function Projects() {
               //demoLink="https://jiaqu-wu.itch.io/procrastinationsg"
             />
           </Col>
-
           <Col md={4} className="project-card">
             <ProjectCard 
               videoTitle = "IceSokoban"
@@ -187,7 +360,7 @@ function Projects() {
               title="An Ice-Sokoban puzzle game"
               description=<h6 style={{lineHeight:1.5}}>
               <i className="purple bold-link">Dec 2022</i><br></br>
-              <br></br>A 3d top-down Sokoban puzzle game built with Unity in a week, used for a friend's <a href="https://www.diva-portal.org/smash/record.jsf?dswid=2694&pid=diva2%3A1810059&c=1&searchType=SIMPLE&language=en&query=qian+lin&af=%5B%22topOrganisationId%3A81%22%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all" className="purple bold-link">thesis</a>,
+              A 3d top-down Sokoban puzzle game built with Unity in a week, used for a friend's <a href="https://www.diva-portal.org/smash/record.jsf?dswid=2694&pid=diva2%3A1810059&c=1&searchType=SIMPLE&language=en&query=qian+lin&af=%5B%22topOrganisationId%3A81%22%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all" className="purple bold-link">thesis</a>,
                   researching the impact of dynamic game difficulty balancing on player user experience in puzzle games.
                   <br></br>
                   <br></br>👥 Team: 1 Programmers, 1 Artist/Level Designer
@@ -248,28 +421,19 @@ function Projects() {
               isGithub = "true"
             />
           </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              videoTitle = "Call of Wind"
-              videoLink = "https://www.youtube.com/embed/_C2x1P2uSmw"
-              videoHeight = "213"
-              videoWidth = "100%"
-              title="Call of Wind"
-              description=<h6 style={{lineHeight:1.5}}>
-              <i className="purple bold-link">Jul 2019 - Sep 2019</i><br></br>
-              Call of Wind is a 2d puzzle platformer game that I worked on with other student developers for around two months in 2019, and it won a prize in a student game development competition in China at the time.
-                  <br></br>
-                  <br></br>👥 Team: 2 Programmers, 2 Artists, 1 Designer
-                  <br></br>
-              <br></br>My contribution:
-              <br></br>· Design and implemented wind-related puzzles and game mechanics.
-              <br></br>· Constantly optimised and iterated on game details based on player feedback.
-              </h6>
-              //ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-               demoLink="https://jiaqu-wu.itch.io/call-of-wind-v10"      //<--------Please include a demo link here 
-            />
-          </Col>
-        </Row>
+</Row>
+              {/* <Row id="Personal-projects-1-3" style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          
+
+          
+
+          
+
+                  
+
+          
+          
+        </Row> */}
               <Row id="Other-projects" style={{ justifyContent: "center", paddingBottom: "20px"}}>
         <LargeProjectCards 
               videoTitle = "Other Projects"

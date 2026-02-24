@@ -29,6 +29,7 @@ export default function Home2() {
                         </p>
                         <p className="locomoto-intro-desc white-text">
                             In <strong>2020</strong>, I moved to Sweden to further pursue this passion in a more professional way. During my two years of studies in Sweden, I contributed to several <a href="/#/Project" className="purple bold-link">game projects</a> as a game programmer and had the opportunity to do an internship at <a href="https://www.blackdropinteractive.com/" className="purple bold-link"> Blackdrop Interactive</a>, where I worked on <a href="https://store.steampowered.com/app/1129310/Receiver_2/" className="purple bold-link">Receiver 2</a>. After completing my studies, I joined <a href="https://greentiledigital.com/" className="purple bold-link"> Green Tile Digital</a> and spent more than two years as a <b className="purple">Gameplay Programmer</b> on <a href="/#/Locomoto" className="purple bold-link">Locomoto</a>.
+                            I am now continuing to refine my technical expertise through the Game Programming specialization at <a href="https://futuregames.se/program/game-programmer-specialization-stockholm/" className="purple bold-link"> FutureGames</a>.
                         </p>
 
                         {/* —— Skills & Expertise —— */}

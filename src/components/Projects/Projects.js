@@ -262,7 +262,7 @@ function Projects() {
   <Col md={4} className="project-card">
             <ProjectCard
               videoTitle = "AI Life Simulation"
-              videoLink = "https://www.youtube.com/embed/fJRRCveD9m8"
+              videoLink = "https://www.youtube.com/embed/VzQqo-MGH0Q"
               videoHeight = "213"
               videoWidth = "100%"
               title="AI Life Simulation"

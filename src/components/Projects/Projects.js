@@ -119,6 +119,41 @@ function Projects() {
 </p>
 <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
   <Col md={4} className="project-card">
+<ProjectCard
+videoTitle="Roots of Ruin Trailer"
+videoLink=""
+videoHeight="213"
+videoWidth="100%"
+title="Roots of Ruin"
+description={
+<h6 style={{ lineHeight: 1.5 }}>
+<i className="purple bold-link">May 2026 - Jun 2026</i>
+<br></br>
+Roots of Ruin is a third-person puzzle adventure built in Unreal
+Engine, where the player transforms into different animals and uses
+their unique abilities to interact with the environment.
+<br></br>
+<br></br>
+👥 Team: 4 Programmers, 4 Designers, 2 Artists
+<br></br>
+<br></br>
+My contribution:
+<br></br>· Architected and implemented the core
+shape-shifting, animal ability, and interaction systems
+in <span className="purple bold-link">Unreal C++.</span>
+<br></br>· Built a modular and data-driven architecture combining
+C++, Data Assets, and Blueprint,
+allowing animal forms, abilities, animations, and interactions to be
+extended without changing the core code.
+<br></br>· Implemented gameplay, animation, VFX, cutscenes, and debugging in Unreal Engine.
+<br></br>· Collaborated with designers and artists to integrate
+gameplay ideas and visual assets into functional and polished game
+features.
+</h6>
+}
+/>
+</Col>
+  <Col md={4} className="project-card">
             <ProjectCard
               videoTitle = "Gracebound Trailer"
               videoLink = ""
@@ -137,7 +172,7 @@ function Projects() {
               <br></br>· Implemented a code-driven animation control pipeline, decoupling gameplay logic from Unity’s Animator state transitions for greater flexibility and scalability.
               </h6>
               //ghLink="https://github.com/soumyajit4419/Chatify"
-              //demoLink="https://futuregames.itch.io/starbeat"
+              demoLink="https://futuregames.itch.io/gracebound"
             />
           </Col>
   <Col md={4} className="project-card">
@@ -259,6 +294,20 @@ function Projects() {
 <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
   {/* ✅ 把其它所有项目卡片（唯一程序员 / solo）+ 新增的2个放这里 */}
   {/* 建议这一组保持 md={4} 三列 */}
+  <Col md={4} className="project-card"> <ProjectCard videoTitle="3D Snake" videoLink="https://www.youtube.com/embed/I0FJx3IJ0ls" videoHeight="213" videoWidth="100%" title="3D Snake" description=<h6 style={{lineHeight:1.5}}> 
+    <i className="purple bold-link">Mar 2026 - Apr 2026</i><br></br> 
+    A 3D reinterpretation of the classic Snake game, built with Unreal Engine 5 and C++. It expands the traditional grid into layered 3D spaces with six-direction movement, and features single-player, local co-op, and competitive battle modes, with the option to play alongside or against an AI-controlled snake. <br></br> <br></br>👤 <span className="purple bold-link">Solo project</span>
+
+  <br></br>
+  <br></br>· Implemented the core gameplay systems entirely in <span className="purple bold-link">C++</span>, including the 3D grid, movement, body-following, collision, game modes, and stage progression, while using Blueprints mainly for UI and presentation. <br></br>· Built local split-screen support for co-op and battle modes, including independent scoring and configurable human or AI-controlled players. <br></br>· Developed a reusable AI component that targets food while avoiding walls, itself, and other snakes. <br></br>· Improved spatial readability through wireframe materials, depth cues, and layer-based color coding.
+</h6>
+isGithub="true"
+ghLink="https://github.com/JiaquWu/UnrealSnake"
+//demoLink=""
+
+/>
+
+</Col>
   <Col md={4} className="project-card">
             <ProjectCard
               videoTitle = "AI Life Simulation"

@@ -11,6 +11,7 @@ import Particle from "../Particle";
 import LargeProjectCards from "./LargeProjectCards";
 
 const groups = [
+  { key: "GoblinGetaway", title: "Goblin Getaway" },
   { key: "Locomoto", title: "Locomoto" },
   { key: "Receiver2", title: "Receiver2" },
   { key: "MultiProgrammer", title: "Team Projects (Multi-Programmer)" },
@@ -65,6 +66,20 @@ function Projects() {
               }}>
                   From early solo prototypes to commercial releases, these selected projects are footprints along the winding path of my journey as a game developer
         </p>
+              <Row id="GoblinGetaway" style={{ justifyContent: "center", paddingBottom: "20px"}}>
+                  <LargeProjectCards
+              videoTitle = "Goblin Getaway"
+              videoLink = "https://www.youtube.com/embed/Nrnvey4fs1s"
+              videoHeight = "720"
+              videoWidth = "1280"
+              title="Goblin Getaway"
+              description = <h6 style={{lineHeight:1.5}}>
+                <i className="purple bold-link">Oct 2025 - Now</i><br></br>
+                      My contribution:<br></br>· Working across gameplay features, game systems, and development tools for Goblin Getaway as the project continues production with the team.
+                      <br></br>· A more detailed breakdown of my work will be added here later, once more of the project can be shown publicly.
+              </h6>
+            />
+        </Row>
               <Row id="Locomoto" style={{ justifyContent: "center", paddingBottom: "20px"}}>
                   <LargeProjectCards
                       
@@ -75,7 +90,7 @@ function Projects() {
               // imgPath={chatify}
               title="Locomoto"
               description = <h6 style={{lineHeight:1.5}}>
-                <i className="purple bold-link">Feb 2023 - Now</i><br></br>
+                <i className="purple bold-link">Feb 2023 - Aug 2025</i><br></br>
                       My contribution:<br></br>· See <a href="/#/Locomoto" className="purple bold-link">Locomoto</a></h6>  
             />
         </Row>

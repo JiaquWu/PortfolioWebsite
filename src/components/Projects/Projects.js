@@ -304,12 +304,12 @@ My contribution:
               title="Call of Wind"
               description=<h6 style={{lineHeight:1.5}}>
               <i className="purple bold-link">Jul 2019 - Sep 2019</i><br></br>
-              Call of Wind is a 2d puzzle platformer game that I worked on with other student developers for around two months in 2019, and it won a prize in a student game development competition in China at the time.
+              Call of Wind is a 2D puzzle platformer game that I worked on with other student developers for around two months in 2019, and it won a prize in a student game development competition in China at the time.
                   <br></br>
                   <br></br>👥 Team: 2 Programmers, 2 Artists, 1 Designer
                   <br></br>
               <br></br>My contribution:
-              <br></br>· Design and implemented wind-related puzzles and game mechanics.
+              <br></br>· Designed and implemented wind-related puzzles and game mechanics.
               <br></br>· Constantly optimised and iterated on game details based on player feedback.
               </h6>
               //ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
@@ -465,10 +465,10 @@ ghLink="https://github.com/JiaquWu/UnrealSnake"
               title="An Ice-Sokoban puzzle game"
               description=<h6 style={{lineHeight:1.5}}>
               <i className="purple bold-link">Dec 2022</i><br></br>
-              A 3d top-down Sokoban puzzle game built with Unity in a week, used for a friend's <a href="https://www.diva-portal.org/smash/record.jsf?dswid=2694&pid=diva2%3A1810059&c=1&searchType=SIMPLE&language=en&query=qian+lin&af=%5B%22topOrganisationId%3A81%22%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all" className="purple bold-link">thesis</a>,
+              A 3D top-down Sokoban puzzle game built with Unity in a week, used for a friend's <a href="https://www.diva-portal.org/smash/record.jsf?dswid=2694&pid=diva2%3A1810059&c=1&searchType=SIMPLE&language=en&query=qian+lin&af=%5B%22topOrganisationId%3A81%22%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all" className="purple bold-link">thesis</a>,
                   researching the impact of dynamic game difficulty balancing on player user experience in puzzle games.
                   <br></br>
-                  <br></br>👥 Team: 1 Programmers, 1 Artist/Level Designer
+                  <br></br>👥 Team: 1 Programmer, 1 Artist/Level Designer
                   <br></br>
               <br></br>Main game features: 
                   <br></br>· Implemented a <span className="purple bold-link">grid-based</span> level design tool, and A Monster's Expedition-like character controller.

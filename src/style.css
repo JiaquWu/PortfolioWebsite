@@ -587,6 +587,29 @@ div.locomoto-intro.left-align > p.home-about-body {
         text-decoration: none;
     }
 
+    .side-nav .nav-group {
+        margin-bottom: 0.7rem;
+    }
+
+    .side-nav .nav-parent {
+        margin-bottom: 0.45rem !important;
+        font-weight: 700;
+    }
+
+    .side-nav .nav-submenu {
+        border-left: 1px solid rgba(255, 255, 255, 0.28);
+        margin-left: 0.75rem;
+        padding-left: 0.65rem;
+    }
+
+    .side-nav .nav-sublink {
+        font-size: 0.9rem;
+        margin-bottom: 0.45rem;
+        padding-top: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
+        opacity: 0.88;
+    }
+
         .side-nav a.active,
         .side-nav a:hover {
             font-weight: 700;

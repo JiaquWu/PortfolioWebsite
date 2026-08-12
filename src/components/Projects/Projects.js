@@ -11,35 +11,30 @@ import Particle from "../Particle";
 import LargeProjectCards from "./LargeProjectCards";
 
 const groups = [
-  { key: "GoblinGetaway", title: "Goblin Getaway" },
-  { key: "Locomoto", title: "Locomoto" },
-  { key: "Receiver2", title: "Receiver2" },
+  {
+    key: "ProfessionalProjects",
+    title: "Professional Projects",
+    children: [
+      { key: "GoblinGetaway", title: "Goblin Getaway" },
+      { key: "Locomoto", title: "Locomoto" },
+      { key: "Receiver2", title: "Receiver 2" },
+    ],
+  },
   { key: "MultiProgrammer", title: "Team Projects (Multi-Programmer)" },
   { key: "SoleProgrammer", title: "Projects as Sole Programmer" },
   { key: "Other-projects", title: "Other projects" }
 ];
 
-function Projects() {
-  return (
-    <Container fluid className="project-section">
-      <Particle />
-          <Container>
-              {/* 侧边导航栏 */}
-              <nav className="side-nav">
-                  {groups.map((g) => (
-                      <a
-                          key={g.key}
-                          href={`#${g.key}`}
-                          className="nav-link"
-                          onClick={(e) => {
-  e.preventDefault();
-  const el = document.getElementById(g.key);
+function scrollToProjectSection(key) {
+  const el = document.getElementById(key);
   if (el) {
     const defaultOffset = -90;
-    const topOffset = -170; // 👈 Locomoto 专用
+    const topOffset = -170;
 
     const yOffset =
-      g.key === "Locomoto" ? topOffset : defaultOffset;
+      key === "Locomoto" || key === "ProfessionalProjects"
+        ? topOffset
+        : defaultOffset;
 
     const y =
       el.getBoundingClientRect().top +
@@ -48,10 +43,45 @@ function Projects() {
 
     window.scrollTo({ top: y, behavior: "smooth" });
   }
-}}
+}
+
+function Projects() {
+  return (
+    <Container fluid className="project-section">
+      <Particle />
+          <Container>
+              {/* Side navigation */}
+              <nav className="side-nav">
+                  {groups.map((g) => (
+                    <div key={g.key} className={g.children ? "nav-group" : undefined}>
+                      <a
+                        href={`#${g.key}`}
+                        className={`nav-link ${g.children ? "nav-parent" : ""}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          scrollToProjectSection(g.key);
+                        }}
                       >
-                          {g.title}
+                        {g.title}
                       </a>
+                      {g.children && (
+                        <div className="nav-submenu">
+                          {g.children.map((child) => (
+                            <a
+                              key={child.key}
+                              href={`#${child.key}`}
+                              className="nav-link nav-sublink"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                scrollToProjectSection(child.key);
+                              }}
+                            >
+                              {child.title}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
               </nav>
 
@@ -66,13 +96,32 @@ function Projects() {
               }}>
                   From early solo prototypes to commercial releases, these selected projects are footprints along the winding path of my journey as a game developer
         </p>
+        <h2
+          id="ProfessionalProjects"
+          className="project-heading"
+          style={{ marginTop: "40px" }}
+        >
+          <b className="purple bold-link">Professional Projects</b>
+        </h2>
+        <p
+          style={{
+            color: "white",
+            zIndex: 10,
+            position: "relative",
+            pointerEvents: "auto",
+            fontStyle: "italic",
+            marginBottom: "20px",
+          }}
+        >
+          Released and announced titles from professional game development work.
+        </p>
               <Row id="GoblinGetaway" style={{ justifyContent: "center", paddingBottom: "20px"}}>
                   <LargeProjectCards
               videoTitle = "Goblin Getaway"
               videoLink = "https://www.youtube.com/embed/Nrnvey4fs1s"
               videoHeight = "720"
               videoWidth = "1280"
-              title="Goblin Getaway"
+              title=<a href="https://store.steampowered.com/app/4193660/Goblin_Getaway/" target="_blank" rel="noreferrer" className="purple bold-link">Goblin Getaway</a>
               description = <h6 style={{lineHeight:1.5}}>
                 <i className="purple bold-link">Oct 2025 - Now</i><br></br>
                       My contribution:<br></br>· Working across gameplay features, game systems, and development tools for Goblin Getaway as the project continues production with the team.
@@ -88,7 +137,7 @@ function Projects() {
               videoHeight = "720"
               videoWidth = "1280"
               // imgPath={chatify}
-              title="Locomoto"
+              title=<a href="https://store.steampowered.com/app/2328650/Locomoto/" target="_blank" rel="noreferrer" className="purple bold-link">Locomoto</a>
               description = <h6 style={{lineHeight:1.5}}>
                 <i className="purple bold-link">Feb 2023 - Aug 2025</i><br></br>
                       My contribution:<br></br>· See <a href="/#/Locomoto" className="purple bold-link">Locomoto</a></h6>  
@@ -102,7 +151,7 @@ function Projects() {
               videoHeight = "720"
               videoWidth = "1280"
               // imgPath={chatify}
-              title="Receiver 2"
+              title=<a href="https://store.steampowered.com/app/1129310/Receiver_2/" target="_blank" rel="noreferrer" className="purple bold-link">Receiver 2</a>
               description = <h6 style={{lineHeight:1.5}}>
                 <i className="purple bold-link">Apr 2021 - Jun 2021</i><br></br>
                 My contribution: <br></br>· Implemented new game features, and resolved 20+ miscellaneous game bugs/issues, most of which can be found in this
@@ -144,26 +193,17 @@ description={
 <h6 style={{ lineHeight: 1.5 }}>
 <i className="purple bold-link">May 2026 - Jun 2026</i>
 <br></br>
-Roots of Ruin is a third-person puzzle adventure built in Unreal
-Engine, where the player transforms into different animals and uses
-their unique abilities to interact with the environment.
+Roots of Ruin is a third-person puzzle adventure built in Unreal Engine, where the player transforms into different animals and uses their unique abilities to interact with the environment.
 <br></br>
 <br></br>
 👥 Team: 4 Programmers, 4 Designers, 2 Artists
 <br></br>
 <br></br>
 My contribution:
-<br></br>· Architected and implemented the core
-shape-shifting, animal ability, and interaction systems
-in <span className="purple bold-link">Unreal C++.</span>
-<br></br>· Built a modular and data-driven architecture combining
-C++, Data Assets, and Blueprint,
-allowing animal forms, abilities, animations, and interactions to be
-extended without changing the core code.
-<br></br>· Implemented gameplay, animation, VFX, cutscenes, and debugging in Unreal Engine.
-<br></br>· Collaborated with designers and artists to integrate
-gameplay ideas and visual assets into functional and polished game
-features.
+<br></br>· Architected and implemented the core shape-shifting, animal ability, and interaction systems in <span className="purple bold-link">Unreal C++</span>, supporting multiple animal forms with different gameplay behaviors.
+<br></br>· Built a <span className="purple bold-link">data-driven C++ / Data Asset / Blueprint</span> setup that connected animal definitions with abilities, animations, and world interactions.
+<br></br>· Integrated gameplay code with animation, VFX, cutscenes, and Blueprint content, handling the full path from gameplay logic to in-engine presentation.
+<br></br>· Worked closely with designers and artists to prototype, iterate, and polish animal abilities and environmental interactions.
 </h6>
 }
 />
@@ -181,10 +221,9 @@ features.
                   <br></br>
                   <br></br>👥 Team: 3 Programmers, 4 Designers
                   <br></br>
-              <br></br>My contribution: <br></br>· Designed and implemented a modular <span className="purple bold-link">action-combat</span> framework supporting combo chains, dash-cancels, and ability interruption inspired by Hades.
-                  <br></br>· Built a flexible policy-based action system allowing actions to interrupt and override each other, enabling high player control and future extensibility.
-                  <br></br>· Architected a data-driven ability framework (ScriptableObject-based) integrating animation events, hit detection, and gameplay effects.
-              <br></br>· Implemented a code-driven animation control pipeline, decoupling gameplay logic from Unity’s Animator state transitions for greater flexibility and scalability.
+              <br></br>My contribution: <br></br>· Built the core <span className="purple bold-link">action-combat system</span>, including combo chains, dash cancels, and rules for actions interrupting or overriding one another, inspired by Hades.
+                  <br></br>· Built a <span className="purple bold-link">ScriptableObject-based ability system</span> connecting abilities with animation events, hit detection, and gameplay effects.
+                  <br></br>· Implemented a <span className="purple bold-link">code-driven animation control system</span>, keeping gameplay logic independent from Unity Animator state transitions.
               </h6>
               //ghLink="https://github.com/soumyajit4419/Chatify"
               demoLink="https://futuregames.itch.io/gracebound"
@@ -199,15 +238,13 @@ features.
               title="Starbeat"
               description=<h6 style={{lineHeight:1.5}}>
               <i className="purple bold-link">Nov 2025</i><br></br>
-              Starbeat is an accessible and addictive rhythm game where you dream of catching stars as an astronaut exploring spectacular planets. 
+              Starbeat is a rhythm game where you play as an astronaut catching stars while traveling across different planets.
                   <br></br>
                   <br></br>👥 Team: 4 Programmers, 3 Artists, 5 Designers
                   <br></br>
-              <br></br>My contribution: <br></br>· Architected the core <span className="purple bold-link">rhythm gameplay system</span>, ensuring beat-accurate interactions and responsive player feedback.
-  
-                  <br></br>· Built and iterated a <span className="purple bold-link">Unity–FMOD</span> level editing pipeline, enabling designers to author rhythm sequences efficiently.
-                  <br></br>· Collaborated closely with designers and audio developers to continuously polish gameplay feel through rapid iteration.
-              <br></br>· Refined 3D note movement and timing behavior to enhance clarity, readability, and overall player feel.
+              <br></br>My contribution: <br></br>· Built the core <span className="purple bold-link">rhythm gameplay system</span> for beat-accurate interactions and responsive player feedback.
+                  <br></br>· Built and iterated a <span className="purple bold-link">Unity-FMOD level editing pipeline</span>, allowing designers to author and adjust rhythm sequences efficiently.
+                  <br></br>· Worked closely with designers and audio developers to iterate on timing, note movement, readability, and overall gameplay feel.
               </h6>
               //ghLink="https://github.com/soumyajit4419/Chatify"
               demoLink="https://futuregames.itch.io/starbeat"
@@ -228,9 +265,9 @@ features.
                   <br></br>👥 Team: 2 Programmers, 2 Artists
                   <br></br>
               <br></br>My contribution: <br></br>· Implemented most of game features with C# and Unity.         
-                  <br></br>· Satisfying third person character controller using <span className="purple bold-link">Cinemachine</span>.
+                  <br></br>· Satisfying third person character controller using Cinemachine.
                   <br></br>· Worked with artists to polish animation system, AI system, and <span className="purple bold-link">Shadergraph</span>, created shader objects for the game environment and interaction system to improve the player experience.
-              <br></br>· Implemented game progression system, save system, quick time events (QTE) system etc.
+              <br></br>· Implemented game progression system, save system, <span className="purple bold-link">quick time events (QTE) system</span> etc.
               </h6>
               //ghLink="https://github.com/soumyajit4419/Chatify"
               demoLink="https://jiaqu-wu.itch.io/jump"
@@ -279,8 +316,8 @@ features.
                demoLink="https://jiaqu-wu.itch.io/call-of-wind-v10"      //<--------Please include a demo link here 
             />
           </Col>
-  {/* ✅ 把 Jump / Online Project / Call of Wind / 你新增的2个（多程序员）卡片放这里 */}
-  {/* 建议这一组用 md={6} 让两列更舒服 */}
+  {/* Team project cards */}
+  {/* Keep this group readable on larger screens. */}
 </Row>
 
 {/* ===================== */}
@@ -307,14 +344,19 @@ features.
 </p>
 
 <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-  {/* ✅ 把其它所有项目卡片（唯一程序员 / solo）+ 新增的2个放这里 */}
-  {/* 建议这一组保持 md={4} 三列 */}
-  <Col md={4} className="project-card"> <ProjectCard videoTitle="3D Snake" videoLink="https://www.youtube.com/embed/I0FJx3IJ0ls" videoHeight="213" videoWidth="100%" title="3D Snake" description=<h6 style={{lineHeight:1.5}}> 
-    <i className="purple bold-link">Mar 2026 - Apr 2026</i><br></br> 
-    A 3D reinterpretation of the classic Snake game, built with Unreal Engine 5 and C++. It expands the traditional grid into layered 3D spaces with six-direction movement, and features single-player, local co-op, and competitive battle modes, with the option to play alongside or against an AI-controlled snake. <br></br> <br></br>👤 <span className="purple bold-link">Solo project</span>
-
-  <br></br>
-  <br></br>· Implemented the core gameplay systems entirely in <span className="purple bold-link">C++</span>, including the 3D grid, movement, body-following, collision, game modes, and stage progression, while using Blueprints mainly for UI and presentation. <br></br>· Built local split-screen support for co-op and battle modes, including independent scoring and configurable human or AI-controlled players. <br></br>· Developed a reusable AI component that targets food while avoiding walls, itself, and other snakes. <br></br>· Improved spatial readability through wireframe materials, depth cues, and layer-based color coding.
+  {/* Solo project cards */}
+  {/* Keep this group at three columns on desktop. */}
+  <Col md={4} className="project-card"> <ProjectCard videoTitle="3D Snake" videoLink="https://www.youtube.com/embed/I0FJx3IJ0ls" videoHeight="213" videoWidth="100%" title="3D Snake" description=<h6 style={{lineHeight:1.5}}>
+    <i className="purple bold-link">Mar 2026 - Apr 2026</i><br></br>
+    A 3D reinterpretation of the classic Snake game, built with Unreal Engine 5 and C++. It expands the traditional grid into layered 3D spaces with six-direction movement, and includes single-player, local co-op, and competitive battle modes with human or AI-controlled snakes.
+    <br></br>
+    <br></br>👤 <span className="purple bold-link">Solo project</span>
+    <br></br>
+    <br></br>My contribution:
+    <br></br>· Implemented the core gameplay entirely in <span className="purple bold-link">C++</span>, including the <span className="purple bold-link">3D grid</span>, movement, body-following, collision, game modes, and stage progression, while using Blueprints mainly for UI and presentation.
+    <br></br>· Built <span className="purple bold-link">local split-screen</span> support for co-op and battle modes, with independent scoring and configurable human or AI-controlled players.
+    <br></br>· Developed an <span className="purple bold-link">AI-controlled snake</span> that targets food while avoiding walls, itself, and other snakes.
+    <br></br>· Improved spatial readability through wireframe materials, depth cues, and layer-based color coding.
 </h6>
 isGithub="true"
 ghLink="https://github.com/JiaquWu/UnrealSnake"
@@ -332,15 +374,15 @@ ghLink="https://github.com/JiaquWu/UnrealSnake"
               title="AI Life Simulation"
               description=<h6 style={{lineHeight:1.5}}>
               <i className="purple bold-link">Dec 2025</i><br></br>
-              A lightweight Unity 2D AI life simulation where predators, prey, and food interact through utility-based decision-making, steering behaviors, and UI-driven parameter tuning to observe emergent behavior, and made in a week.
+              A lightweight Unity 2D AI life simulation built in one week, where predators, prey, and food interact through Utility AI, steering behaviors, and tunable simulation parameters.
                   <br></br>
-                  <br></br>👤 <span className="purple bold-link">Solo project</span> 
-
+                  <br></br>👤 <span className="purple bold-link">Solo project</span>
                   <br></br>
-              <br></br>· Designed a modular AI architecture inspired by GOAP and Utility AI, enabling agents to dynamically evaluate survival priorities.
-                  <br></br>· Implemented a utility-driven action selection system decoupled from steering behaviors to support scalable and extensible simulation logic.
-<br></br>· Built a shared movement pipeline (goal seeking, avoidance, boundary steering, optional flocking) to unify agent locomotion.
-<br></br>· Developed runtime parameter controls and visual debugging tools to experiment with and observe emergent behaviors.
+              <br></br>My contribution:
+                  <br></br>· Built an AI decision-making system inspired by <span className="purple bold-link">GOAP and Utility AI</span>, allowing agents to evaluate changing survival priorities.
+                  <br></br>· Separated <span className="purple bold-link">action selection</span> from <span className="purple bold-link">steering behaviors</span>, keeping decision-making and movement logic independent.
+                  <br></br>· Built a shared steering system for goal seeking, avoidance, boundary steering, and optional flocking.
+                  <br></br>· Developed <span className="purple bold-link">runtime parameter controls</span> and visual debugging tools for experimenting with and observing emergent behavior.
               </h6>
               isGithub = "true"
               ghLink="https://github.com/JiaquWu/AI-Life-Simulation"
@@ -356,15 +398,14 @@ ghLink="https://github.com/JiaquWu/UnrealSnake"
               title="Vampire Survivor Project"
               description=<h6 style={{lineHeight:1.5}}>
               <i className="purple bold-link">Oct 2025</i><br></br>
-              A modular, data-driven bullet-heaven game built in Unity, focused on scalable entity architecture, performance optimization, and maintainable gameplay systems for large-scale enemy simulations, and made in 2 weeks.
+              A bullet-heaven game built in Unity over two weeks, focused on handling large numbers of enemies and projectiles while keeping gameplay systems easy to expand.
                   <br></br>
-                  <br></br>👤 <span className="purple bold-link">Solo project</span> 
-
+                  <br></br>👤 <span className="purple bold-link">Solo project</span>
                   <br></br>
-              <br></br>· Designed a modular entity architecture separating configuration, runtime logic, and presentation to support scalable content expansion.
-                  <br></br>· Implemented a data-driven gameplay framework enabling reusable enemy definitions, upgrade systems, and stat scaling without modifying core code.
-<br></br>· Built a high-performance object pooling and centralized update pipeline to efficiently handle large numbers of enemies and projectiles.
-<br></br>· Structured the project with long-term extensibility in mind, supporting future features such as co-op, save systems, and expanded ability mechanics.
+              <br></br>My contribution:
+                  <br></br>· Separated <span className="purple bold-link">entity configuration, runtime logic, and presentation</span>, making enemies and other gameplay entities easier to define and modify independently.
+                  <br></br>· Built a <span className="purple bold-link">data-driven gameplay system</span> for reusable enemy definitions, upgrades, and stat scaling.
+                  <br></br>· Implemented object pooling and a <span className="purple bold-link">centralized update loop</span> to efficiently handle large numbers of enemies and projectiles.
               </h6>
               isGithub = "true"
               ghLink="https://github.com/JiaquWu/MapleSurvivors"
@@ -408,8 +449,8 @@ ghLink="https://github.com/JiaquWu/UnrealSnake"
                   <br></br>👤 <span className="purple bold-link">Solo project</span> 
                   <br></br>
               <br></br>Main game features:
-                  <br></br>· Implemented action component and attribute componenent for <span className="purple bold-link">game ability system</span> and character attributes.
-                  <br></br>· Utilized <span className="purple bold-link">environment query system</span> and <span className="purple bold-link">behaviour tree</span> to created AI system.
+                  <br></br>· Implemented action component and attribute componenent for <span className="purple bold-link">game ability system(GAS)</span> and character attributes.
+                  <br></br>· Utilized <span className="purple bold-link">environment query system(EQS)</span> and <span className="purple bold-link">behaviour tree</span> to created AI system.
               </h6>
               //ghLink="https://github.com/soumyajit4419/Plant_AI"
               //demoLink="https://jiaqu-wu.itch.io/procrastinationsg"

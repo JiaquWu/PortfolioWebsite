@@ -360,7 +360,7 @@ My contribution:
 </h6>
 isGithub="true"
 ghLink="https://github.com/JiaquWu/UnrealSnake"
-//demoLink=""
+demoLink="https://jiaqu-wu.itch.io/snake-3d-version"
 
 />
 
@@ -386,7 +386,7 @@ ghLink="https://github.com/JiaquWu/UnrealSnake"
               </h6>
               isGithub = "true"
               ghLink="https://github.com/JiaquWu/AI-Life-Simulation"
-              //demoLink=""
+              demoLink="https://jiaqu-wu.itch.io/ai-life-simulation"
             />
           </Col>
 <Col md={4} className="project-card">
@@ -409,7 +409,7 @@ ghLink="https://github.com/JiaquWu/UnrealSnake"
               </h6>
               isGithub = "true"
               ghLink="https://github.com/JiaquWu/MapleSurvivors"
-              //demoLink=""
+              demoLink="https://jiaqu-wu.itch.io/maplesurvivor"
             />
           </Col>
   <Col md={4} className="project-card">
